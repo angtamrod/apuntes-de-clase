@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border-Box</title>
+    <!--posición relativa vs posición absoluta-->
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+<body>
+    <div class="divRojo caja">
+       hola soy el contenido! 
+    </div>
+
+    <div class="divVerde caja">
+       hola soy el contenido 1! 
+     </div>
+
+     <div class="divVerde caja">
+        hola soy el contenido 1! 
+      </div>
+ 
+     <div class="divVerde caja resaltada">
+        hola soy el div verde caja y resaltada
+     </div>
+
+     <div class="divVerde caja">
+        <div class="resaltada">
+        hola soy el div verde caja y resaltada
+      </div>
+      </div>
+
+      <hr>
+
+      <style>
+       #caja{
+        background: red;
+       }
+       .caja2{
+        background: green;
+       }
+       .caja2biz{
+        background: purple;
+       }
+       .caja3{
+        background: orange;
+       }
+       .caja2.caja2biz{
+        background: blue;
+       }
+       #caja1 .caja2{
+        background: black;
+       }
+      </style>
+
+      <div id="caja1"> 
+        <div class="caja3"> caja3 </div>
+        <div class="caja2"> caja3 </div>
+
+         </div>
+      
+      <div id="caja2biz"> caja2biz </div>
+      <div class="caja3"> caja3 </div>
+</body>
+</html>

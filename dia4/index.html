@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes sobre CSS</title>
+</head>
+<body>
+    <h1>Box Model (Modelo de cajas)</h1>
+
+    Todas las cajas tienen 4 elementos:
+
+1. Content (Contenido)
+Es el espacio donde se muestra nuestro contenido como por ejemplo: texto- imágenes-video CSS height, width, min-height, min-width max-height, max-width
+
+2. Padding (Relleno interno)
+Es el espacio entre el contenido y el borde del elemento. Podemos definir este espacio para los cuatro lados de la caja (arriba, derecha, abajo, izquierda) CSS: Padding, Padding-top, padding-right, padding-bottom, padding-left
+
+3. Border (Borde)
+Es la línea que rodea el contenido y el relleno. Puede tener un ancho, estilo y color
+CSS: Border, border-style, border-color, border-width
+
+4. Margin (Margen)
+Es el espacio entre el borde del elemento y los otros elementos de nuestra web. Se puede definir para los cuatro lados de la caja (arriba, derecha, abajo, izquierda)
+CSS: margin, margin-top, margin-right, margin-bottom, margin-left
+
+
+cajas en bloque: <div></div>
+ Este tipo de cajas si ocupan el ancho de la página 
+
+cajas inline: <span></span>
+ Este tipo de cajas no ocupan el ancho de la página 
+
+Ejemplos: 
+<div style="background-color: red; height: 100px; padding: 10px; border: 10px dashed black; margin: 15px; margin-bottom: 15px;"> 
+    Hola soy una caja
+</div>
+<div style="background-color: blue; height: 100px;"> 
+    Hola soy una caja
+</div>
+
+La diferencia entre estas dos cajas es que la que no tiene padding no deja espacio entre el contenido y el borde
+
+En el caso del border no es necesario, especificar border-style/border-color/border-width
+
+<span style="background-color: red;">
+Hola soy una caja
+</span>
+<span style="background-color: yellow; width: 200px;">
+    Hola soy una caja
+    </span>
+
+En este caso el width no aplicaría porque es una caja inline, para las imágenes sin embargo si lo haría
+
+<span style="background-color: green;">
+    Hola soy una caja
+        </span>
+
+</body>
+</html>

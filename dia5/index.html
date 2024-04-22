@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de usuario</title>
+    <style>
+        
+        #mifooter {
+            background-color: aquamarine;
+            margin: 20px;
+            padding: 20px;
+
+ 
+        }
+
+        .contenido {
+            background-color: blue;
+            margin: 25px;
+            padding: 25px;
+            color: white;
+
+        }    
+        
+        .rounded {
+            border-radius: 5px;
+        }
+
+        
+        </style>
+
+        
+</head>
+<body>
+    <h1>Perfil de usuario</h1>
+
+<!--Cajas con clase (class) para CSS-->
+<div class="contenido rounded">
+Contenido 1
+</div>
+
+
+
+<div class="contenido rounded">
+    Contenido 2
+</div>
+
+    
+<span class="contenido rounded">
+    Contenido 3
+</span>
+
+<!--Cajas con ID para CSS-->
+
+<div id="mifooter">
+    Contenido 4
+
+    
+</div>
+
+
+<style>
+    p{
+        color: red;
+        width: 50px;
+        height: 50px;
+        border: 1px solid green;
+
+    }
+
+    .ej1 {
+        /*No se muestra en pantalla*/
+            display: none;
+        }
+    .ej2 {
+        /*Se muestra como inline, y NO posee propiedades de alto y ancho*/
+            display: inline;
+        }
+    .ej3 {
+        /*Se muestra como bloque dentro de nuestra pantalla independientemente del texto con los atributos que le hemos dado*/
+            display: block;
+        }
+     .ej4 {
+        /*Se muestra como como un bloque alineado con las medidas que le hemos atribuido*/
+            display: inline-block;
+        }
+        
+</style>
+<h1> PropiedadesDisplay</h1>
+
+<div>
+    <h2>Display: none</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quae veniam fugiat nisi dolorum odio sunt, sapiente et maxime eveniet illum ratione, <p   class="ej1">Hola angy</p> debitis molestiae? Corporis cum obcaecati debitis distinctio perspiciatis?
+</div>
+
+<div>
+    <h2>Display: Inline</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quae veniam fugiat nisi dolorum odio sunt, sapiente et maxime eveniet illum ratione, <p class="ej2">Hola angy</p> debitis molestiae? Corporis cum obcaecati debitis distinctio perspiciatis?
+</div>
+
+<div>
+    <h2>Display: Block</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quae veniam fugiat nisi dolorum odio sunt, sapiente et maxime eveniet illum ratione, <p class="ej3">Hola angy</p> debitis molestiae? Corporis cum obcaecati debitis distinctio perspiciatis?
+</div>
+    
+<div>
+    <h2>Display: Inline Block</h2>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum quae veniam fugiat nisi dolorum odio sunt, sapiente et maxime eveniet illum ratione, <p class="ej4"> Hola angy</p> debitis molestiae? Corporis cum obcaecati debitis distinctio perspiciatis?
+</div>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.box{
+    /*height: 100px;*/
+    width: 100px;
+    background-color: #eb9d37;
+    /*fondo de la caja*/
+    border: 3px solid black;
+    /*borde de la caja 1º(grosor de línea) 2º(línea sólida) 3º(color)*/
+    border-radius: 5px;
+    /*para curvar el borde*/
+    box-shadow: inset 10px 10px 10px rgb(253, 200, 102);
+    /*Para hacer unas sombra dentro de la caja
+    Inset se utiliza para hacerlo de forma interna dentro de la caja, si no le ponemos esto se saldrá de la caja
+    */
+    border: solid 5px rgb(0, 0, 0);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 225px;
+
+    /*Estan separadas porque estas tres funciones solo funcionan con display:flex*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2{
+  /*Utilizamos este box2 para el ejemplo 5 con el flex-grow*/
+    /*height: 100px;*/
+    background-color: #a6630c;
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 100px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-grow: 1;
+}
+.boxDouble{
+width: 200px;
+}
+.flexx{
+    /*propiedades de flex*/
+    display: flex;
+    gap: 4px;
+    /*el gap se usa para hacer espacios entre las cajas (SOLO FUNCIONA con el display:flex)*/
+
+
+    color: white;
+    filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.5));
+    /*esto sirve para hacer un sombreado 1º(pixeles hacia arriba) 2º(pixeles hacia abajo) 3º(como se desparrama la sombra)4º(color)*/
+    font-weight: bold;
+    /*Para poner las letras en negrita/cursiva e.t.c...*/
+    font-size: x-large;
+    /*para aumentar el tamaño de la letra*/
+    /*ESTAS ÚLTIMAS SON PROPIEDADES DE CSS EN GENERAL*/
+
+}
+
+.purpleBox {
+background: purple;
+padding: 5px;
+height: 200px;
+
+}
+
+.ej1{
+
+  /*Indica la dirección de los elementos en cuanto al orden de los elementos*/
+
+    flex-direction: row; /*Esta es la dirección por defecto*/
+    
+    /*flex-direction: row-reverse; (para invertir el orden de la dirección de los elementos)*/
+    /*flex-direction: column;  (Tomará la dirección en vertical (en caso de estar en horizontal))*/
+    /*flex-direction: column-reverse;   (Tomará la dirección en vertical (en caso de estar en horizontal) e invertirá el orden de los elementos )*/ 
+}
+.ej2{
+/*El flex-wrap sirve para que en el caso de que los elemetos no quepan en la misma línea los pasará abajo*/  
+    /*flex-wrap: nowrap;  (sin flex-wrap por defecto)*/
+    
+    flex-wrap: wrap;  /*(Pasará los elementos de la misma línea hacia abajo si no caben al estrecharlos)*/
+    
+    /*flex-wrap: wrap-reverse; Lo que hace es que al estrecharse en vez de mandar los elementos hacia abajo los amontona arriba*/
+
+}
+
+.ej3{
+
+   flex-direction: row;
+
+/*Justify-content sirve para colocar los elementos en la página web de forma horizontal*/
+
+/*justify-content: flex-start;  (Coloca el contenido a la izquierda)*/    
+
+   justify-content: flex-end;  /*Coloca el contenido a la derecha*/ 
+
+/*justify-content: center;  (Centra el contenido)*/
+
+/*justify-content: space-between; Separa los elementos sin tener en cuenta los márgenes*/
+
+/*justify-content: space-around;  (Pone espacio entre los elementos teniendo en cuenta los márgenes) QUEDA BIEN*/
+/*justify-content: space-evenly;  (Separa poniendo el mismo espacio entre elemento y márgenes) NO SE USA TANTO*/
+}
+
+.ej4{
+align-items: flex-start; /*Los elementos estarán alineados hacia arriba*/
+/*align-items: flex-end; (Los elementos estarán alineados hacia amajo de la caja)*/
+/*align-items: center; (Los elementos se colocarán en el centro de la caja)*/
+/*align-items: strecht; (Estirará los elementos para que todos tengan la misma altura SOLO FUNCIONARÁ CON LA ALTURA AUTOMÁTICA)*/
+/*align-items: baseline; (los alineará en función al texto)*/
+}
+
+.handborder {
+
+  /*Esto es para hacer el borde de la caja como si fuese dibujado*/
+border: solid 5px rgb(0, 0, 0);
+border-radius: 255px 15px 225px 15px/15px 225px 15px 225px;
+}
+
+    </style>
+</head>
+<body>
+  <h3>Flex Direction</h3> 
+  <div class="flexx ej1">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+  </div>
+    <h3>Flex Wrap</h3> 
+    <div class="flexx ej2">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box boxDouble">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+    </div>
+      <h3>justify-content</h3> 
+      <p>Modifica el alineado en el EJE PRINCIPAL<br>Si estamos en normal: eje horizontal/ Si estamos en columns: eje vertical</p>
+    <div class="flexx ej3 purpleBox">
+      <div class="box boxDouble">1</div>
+      <div class="box">2</div>
+      <div class="box boxDouble">3</div>
+  </div>
+  <h3> Alingn Items</h3> 
+  <p>Modifica el alineado en el EJE SECUNDARIO<br>Si estamos en normal: eje vertical/ Si estamos en columns: eje horizontal</p>
+    <div class="flexx ej4 purpleBox">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box boxDouble" style="align-self: flex-end;">4</div>
+      <!--El aling-self que le hemos asignado a esta caja sirve para modificar una caja en concreto-->
+  </div>
+
+  <h3> Flex Grow</h3> 
+  <!--El flex grow se utiliza para que lo elementos se expandan hasta ocupar toda la caja-->
+  <div class="flexx ej5 purpleBox">
+    <div class="box2 handborder">1</div>
+    <!--Esta caja tiene asignada un flex-grow:1 en la etiqueta <style>-->
+    <div class="box handborder">2</div>
+    <div class="box2 boxDouble handborder" style="flex-grow: 2;">3</div>
+    <!--A esta caja en particular le hemos asignado un flex-grow: 2 lo que hace que sea más grande que la caja 1 que le hemos asignado un flex-grow 1 en la etiqueta <style>-->
+    <div class="box handborder">4</div>
+    <!--Podríamos quitarle la class="box2" a todos los elementos menos 1 y este haría la función de ocupar el ancho de la caja respetando el resto de tamaños originales de las otras cajas-->
+    <!--Si pones dos elementos iguales sin especificación de que fuese más grande ambos elementos se expandirán de forma equitativa hasta completar la caja respetando el tamaño del resto de elementos-->
+    
+</div>
+</body>
+</html>
