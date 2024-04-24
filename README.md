@@ -236,9 +236,33 @@ Una forma de centrar un div
 
 
 El display:flex va en la caja contenedor primaria es decir solo afecta a los hijos no a los subhijos
-Los atributos flex se deben poner en cada caja específica
+Los atributos flex se deben poner en cada caja específica de cada subhijo
 
 Para mover elementos a través de la página con la propiedad flex:
  Justify-content sirve para moverlos HORIZONTALMENTE
  Alingn-items sirve para moverlos VERTICALMENTE
   Para mover elementos a través de la página con la propiedad flex
+
+  Esta página nos explica como hacer un RESET para todos los estilos de nuestra página:
+  https://meyerweb.com/eric/tools/css/reset/
+  
+  También hay otros que dan medidas de normalización como esta, que busca que en todos los navegadores y pantallas se vea de la misma manera:
+  https://necolas.github.io/normalize.css/
+  https://elad2412.github.io/the-new-css-reset/
+
+
+Un LAYOUT es la distribución que va a llevar una página WEB esto es lo primero que debemos hacer organizar de que manera vamos a distribuir los elementos en la página WEB
+A la hora de organizar el layout el header el main y el footer son COLUMNAS, ya que todo lo dividible en filas se entiende como columnas, entonces en el atributo container, que contendrá todo estos en el body deberíamos poner esto:
+
+.container{
+            display:flex;
+            flex-direction: column;
+            height: 100vh; 
+        }
+
+
+Para repetir el número de elementos que quieres utilizar ponemos el nombre del elemento (li), asterisco(*) ponemos seguido el número de veces (5)que los quieres ver:
+  li*5
+
+Como especificar que el contenido ocupe todo lo que sobra de espacio en una página:
+  height: 100vh; /*100% del view height*/
