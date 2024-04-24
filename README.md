@@ -133,6 +133,7 @@ Para no tener que estar poniendo el border-sizing en todas las clases podemos us
 
 
 
+
 Por defecto los navegadores le agregarán un margin y un padding, para que esto no sea así y para cero tendríamos que poner:
   <style> 
    *{
@@ -266,3 +267,6 @@ Para repetir el número de elementos que quieres utilizar ponemos el nombre del 
 
 Como especificar que el contenido ocupe todo lo que sobra de espacio en una página:
   height: 100vh; /*100% del view height*/
+
+
+Todos los elementos STICKY y FIXED van con POSITION y NO CON DISPLAY FLEX

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        img{
+            opacity: 0.3;
+            width: 100%;
+        }
+        .container{
+    
+            width: 300px;
+            position: relative;
+        }
+        .topleft{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .topright{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        
+        .bottomleft{
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+        .bottomright{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .center{
+            position: absolute;
+            top: 50%;
+
+            /*Sirve para centrar textos*/
+            width: 100%;
+            text-align: center;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    <img src="https://img.freepik.com/foto-gratis/primer-plano-gato-jengibre-abrazando-lamiendo-al-otro-aislado-pared-blanca_181624-32893.jpg" alt="Gatito">
+        
+        <div class="topleft">Arriba-Izq</div>
+        <div class="topright">Arriba-Der</div>
+        <div class="bottomleft">Abajo-Izq</div>
+        <div class="bottomright">Abajo-Der</div>
+        <div class="center">centro</div>
+</div>
+</body>
+</html>
