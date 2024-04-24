@@ -6,104 +6,114 @@
     <title>Document</title>
     <style>
 
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
         .container{
-            display:flex;
-            flex-direction: column;
-            gap: 20px;
-            height: 100vh;
-            padding: 20px; 
+        display:flex;
+        flex-direction: column;
+        gap: 20px;
+        height: 100vh;
+        padding: 20px; 
         }
 
-        .header{
+            .header{
 
-        }
+            }
 
-        .main{
+            .main{
             flex-grow: 1;
 
             display: flex;
             gap: 20px;
             flex-direction: row;
-        }
+            }
+        
+            .footer{
+
+            }
+
+                
+
+                .main-content{
+                flex-grow: 1;
+                
+                /*background-color: gray*/
+
+                display: flex;
+                gap: 20px;
+                flex-direction: column;
+                }
+
+                    .content{
+                    flex-grow:1;
+                    }
+        
+                    /*.content-1, .content-2, .content-3{
+                    flex-grow: 1;
+                    }*/
+
+                        .fila1 .content{
+                        height: 100%;
+                        }
+                        .fila1{
+                        flex-grow:1;
+                        }
+                        .fila2{
+                        display: flex;
+                        gap: 20px;
+                        flex-grow: 1;
+                        }
+
         .sidebar{
             width: 200px;
-        }
+                }
 
-        .main-content{
-            flex-grow: 1;
-            gap: 20px;
-            /*background-color: gray*/
-
-            display: flex;
-            flex-direction: column;
-        }
-
-        .content{
-            flex-grow:1;
-        }
-        
-        /*.content-1, .content-2, .content-3{
-            flex-grow: 1;
-
-        }*/
-
-        .fila1 .content{
-            height: 100%;
-        }
-        .fila1{
-            flex-grow:1;
-        }
-        .fila2{
-            display: flex;
-            gap: 20px;
-            flex-grow: 1;
-        }
-
-        .footer{
-
-
-        }
-        .box{
-            background-color: aqua;
-            border: 1px solid black;
+        .sidebar .box{
+            background-image: none;
+            background-color: #43cec6;
+                }
+                
+        .box{ /*Esta caja la hacemos para todo lo que quiero que se vea como una caja*/
+            
+            background-image: linear-gradient(130deg, #6C52D9 0%, #1EAAFC 85%, #3EDFD7 100%);
+            border: 6px solid black;
             border-radius: 6px;
-            padding:10px;
+            padding: 10px;
 
-            /*centrar contenido en mis cajas*/
+            /* centrar contenido en mis cajas*/
             display: flex;
             align-items: center;
             justify-content: center;
 
-            color: white;
-            box-shadow: 0 10px 20px rgba (0,0,0,19) 
+            color:white;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 
+                        0 6px 6px rgba(0,0,0,0.23);
 
         }
 
     </style>
 </head>
 <body>
-    <div class="container" style="display:flex; flex-direction: column;">
-        <div class="header box">header</div>
-        <div class="main">
-            <div class="sidebar box">sidebar</div>
-            <div class="content">
+    <div class="container" style="display:flex; flex-direction: column;"> <!--Esta es la caja que contiene TODO el contenido de nuestra página web tiene una disposición de columna, se dispondrá de manera vertical ya que colocará 3 filas de forma continua de arriba a abajo. Estas 3 filas que serán el header/main/footer para designar estas filas haremos tres etiquetas <div>-->
+        <div class="header box">header</div> <!--1. Etiqueta referente al HEADER-->
+        <div class="main"><!--4. Etiqueta referente al MAIN. Esta etiqueta deberíamos hacerla fila con el flex-direction:row; ya que su contenido estará dispuesto de derecha a izquierda -->
+            <div class="sidebar box">sidebar</div><!--Lo dejarmos como está con su disposición de fila-->
+            <div class="main-content">
                 <div class="fila1">
-                <div class="main-content-1 box">Content 1</div>
+                <div class="content box">Content 1</div>
             </div>
                 <div class="fila2">
-                    <div class="content-2 box">Content 2</div>
-                    <div class="content-3 box">Content 3</div>
+                    <div class="content box">Content 2</div>
+                    <div class="content box">Content 3</div>
                 </div>
             </div>
             
 
         </div>
-        <div class="footer box">footer</div>
+        <div class="footer box">footer</div><!--3. Etiqueta referente al FOOTER-->
 
     </div>
 </body>
