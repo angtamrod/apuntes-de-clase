@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 4 NAVEGACIÓN</title>
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    .navbar{
+    display: flex;
+    
+    justify-content:space-between;
+    background-color: #333;
+    color: white;
+
+    padding: 10px 20px;
+    }
+
+    .logo{
+        font-weight: bold;
+    }
+
+    .logo a { 
+        text-decoration: none; /*Quitará el subrayado de los enlaces por defecto*/
+        color: white;
+    }
+
+    .menu {
+        display: flex;
+    
+        gap: 20px;
+        list-style-type: none;
+    }
+
+    .menu li{
+        /*margin-right: 20px;*/
+    }
+    .dropdown{
+        position: relative;
+
+    }
+    .dropdown-menu{
+        display: none;
+        position: absolute;
+        width: 140px;
+        padding: 10px;
+        background-color: #333;
+        background-color: red;
+        left: 0;
+        top: 100%;
+
+    }
+    .dropdown:hover .dropdown-menu{
+        display: block;
+
+    }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo"><a href="./" title="Home">Logo</a>
+        </div>
+    </div> 
+    <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Nosotros</a></li>
+        <li class="dropdown"><a href="#">Servicios</a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Servicio1</a></li>
+            <li><a href="#">Servicio2</a></li>
+            <li><a href="#">Servicio3</a></li>
+        </ul></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>   
+</body>
+</html>

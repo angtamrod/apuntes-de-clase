@@ -270,3 +270,5 @@ Como especificar que el contenido ocupe todo lo que sobra de espacio en una pág
 
 
 Todos los elementos STICKY y FIXED van con POSITION y NO CON DISPLAY FLEX
+
+Los UL no pueden tener otro elemento que no sean LI
