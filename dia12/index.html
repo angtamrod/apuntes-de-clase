@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <h1>Formularios</h1>
+
+    <!--
+       Formularios:
+       La etiqueta <form> funciona como un div normal que puede contener lo que queramos le puedes poner estilos y clases.
+
+       
+       ATRIBUTOS de formulario:
+       "action": A quien le enviaré la información 
+       podriamos poner cualquier dirección WEB con una URL de otro servidor o en este caso si queremos hacer referencia a nuestra web haremos un archivo.php
+
+       "method": Tipo de request que vamos a hacer los más comunes son:
+       GET y POST
+       Con el método GET la información se mandará a través de la URL
+       Por defecto actuará como GET pero podríamos pedirle que lo mande como POST
+       El método GET tiene un límite de 2048 caracteres 
+       El método POST soporta hasta 32mb
+
+       
+       Tipos de INPUTS:
+       A las etiquetas de inputs también se le pueden poner clases. A todos los inputs hay que ponerles un name.
+       Inputs básicos (HTML 4.0): submit, reset, text, password, file, image y hidden. HTML4 es una versión antigua de HTML donde tenemos solo estos inputs.
+       Inputs (HTML5): button, number, tel, url, email, date, time, color range
+       Inputs (HTML 5.1): month, week, datetime.local (fecha con hora)  
+    
+       <form action="./recibirform.php" method="get">
+       
+       name: Es un identificador único de la "variable"
+       
+       value: Es el valor inicial. Este texto se puede seleccionar
+       
+       required: En verdad cuando se escribe este atributo es como poner required=true pero no es necesario ponerlo en verdadero para que funcione. 
+       ES PARA HACER UN CAMPO OBLIGATORIO. Es decir el usuario no podrá enviar la información hasta que no lo rellene.
+       
+       placeholder: Es un texto que quiero mostrar en el input pero que no es el valor Ej:(Ingrese su nombre...) Cuando le damos a escribir se borra. No confundir con el "value" no lo podemos seleccionar. Es como una especie de aviso. MENSAJE AL USUARIO.
+
+       size: Modifica el tamaño de la caja, que por defecto es 20. Esto es como un estilo pero en lenguaje HTML y es preferible NO USARLO porque todo el estilo lo haremos a través del CSS.
+
+       maxlength: Especificará cuantos caracteres puede tener lo que escribamos. En nuesto ejemplo le hemos asignado 5 caracteres y no dejará poner más de un caracter. CANTIDAD MÁXIMA DE CARACTERES SOPORTADOS
+
+       minlenght: Cantidad mínima de caracteres soportados. Esto lo podríamos evitar cualquier usuario malintencionado cambiándolo en el inspector
+
+       autofocus: Seleccionar automáticamente el input elegido, y cuando entre a la página WEB el usuario pueda escribir automáticamente. Está bien para mejorar la experiencia de usuarios que siempre el autofocus sea el primer elemento de nuestro formulario. Es más facil para que el usuario pueda tabular entre cajoncitos.
+       
+       <button>: Habilitaron la etiqueta button porque en el <input> no podemos poner nada dentro, es una etiqueta que se cierra en sí misma. El <button> soporta HTML dentro y el <input> solo me permite escribir lo que pueda escribir dentro de "value" no se puede poner un <h1> ni nada. El input es solo texto así que por fuerza hay que ponerle un type="submit" con el <button> no es necesario ya que por defecto está en submit, se le puede poner pero no es necesario.
+       "style: vertical.align:middle; (Dentro de la imagen) nos permitirá combinar imagen y texto en la misma línea"
+
+       disabled: Deshabilita el elemento. DESACTIVA EL INPUT.
+
+       checked: Para que las opciones aparezcan directamente marcadas. En el caso de que seleccionemos dos no apareceran porque el type radio no dejaría marcar 2 diferentes
+
+       min/max/step: cuando utilizamos el type="number". Para establecer un mínimo y un máximo numérico. El step se utiliza pará avanzar en números una cantidad específica, en este caso del ejemplo hemos puesto 5, así que los números ascenderán o descenderán de 5 en 5.
+    
+
+       Atributos TYPE:
+
+       "type="password": Esto ocultará la información de lo que escribamos. Como cuando rellenamos un campo de contraseña, en cualquier página WEB. Esto realmente genera una falsa sensación de seguridad ya que se puede cambiar en el inspector.
+
+       "type="number": Esto solo permite escribir números en el input. Esto facilita la labor al usuario, si lo ponemos desde un móvil desplegará automáticamente el teclado numérico.
+
+       "type="date": Nos permite abrir un calendario directamente
+
+       "type="radio": Esto sirve para poner marcadores de diferentes opciones, y es IMPORTANTE ponerle el mismo "name" a todos para que al seleccionar una opción desmarque otra. 
+       Para hacer una selección múltiple solo tenemos que cambiarle el "name".
+       
+
+       
+       BOTONES ESPECIALES:
+
+       "type="button":Sirve que para que cuando le demos al botón no envíe nada.
+       
+       "type="reset": Es un botón que sirve para resetear un formulario es decir borrar los datos
+
+
+    Esto se pone en el "action=" y sirve para mandar la información resultante de los campos que que se rellenan de nuestros formularios
+    https://ecampus.rocks/test-forms.php  
+
+    -->
+    
+    <form action="./index.html" method="get">
+
+        <!--te envío un hola
+
+        valor 1
+        valor 2
+        valor 3
+
+        <button>Enviar</button>-->
+
+        <input type="text" autofocus name="usuario" value="maria" required>
+        <input type="text" name="clave" value="1234">
+
+        
+
+        <h3>User</h3>
+
+        <input type="text" placeholder="Ingrese su nombre..." maxlength="5" name="desactivado" disabled>
+        
+        <!--Colocando estos dos inputs si Escribimos en el primer cajón y ponemos un nombre (angy) al que le hemos asignado el name=usuario y en el segundo al que le hemos asignado el name=clave una serie de números (1234) y le damos a enviar finalmente en la dirección WEB arriba nos aparecerá esto:
+        http://127.0.0.1:5501/dia12/index.html?usuario=angy&clave=1234
+
+        Estos atributos "name" deben ser únicos si queremos poner otro igual deberíamos poner un caracter que lo diferencie:
+        <input type="text" name="usuario2">
+        -->
+        
+        <!--<input type="submit" value="Registrarse">-->
+
+        <input type="password" value="claveSecreta!!!">
+
+        <input type="number" name="altura" min="20" max="40" step="5">
+
+        <input type="date" name="fecha">
+        <input type="time">
+        <br>
+
+        Opciones de radio para escoger una sola:
+        
+        <input type="radio" name="sabor_favorito" value="1">opción 1 <br>
+        <input type="radio" name="sabor_favorito" value="2">opción 2 <br>
+        <input type="radio" name="sabor_favorito" value="3">opción 3 <br>
+        <input type="radio" name="sabor_favorito" value="4">opción 4 <br>
+
+        
+
+        <h3>Enviar</h3>
+
+        <!--<input type="submit">-->
+
+        <button type="submit">
+            <img src="imgs/icono.png" alt="icono" width="20px" style="vertical-align: middle;">Enviar
+        </button>
+
+        
+        <h3>Botones especiales</h3>
+
+        <input type="reset">
+
+        <input type="button" value="no enviar">
+        <button type="button" onclick="Despedirse()">No envía pero SALUDA!</button>
+    </form>
+
+    <script>
+       // Función de saludar!
+       function Saludar(){
+        alert("HOLA ALUMNOS");
+       } 
+
+       function Despedirse(){
+        alert("Adioos!");
+       }
+    </script>
+</body>
+</html>
