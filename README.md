@@ -275,5 +275,24 @@ Los UL no pueden tener otro elemento que no sean LI
 
 Los formularios son una manera de comunicarnos con el servidor haremos consultas (REQUEST) de GET y de POST.
 
+FORMAS DE PONER COMENTARIOS EN VISUAL STUDIO CODE:
 <!--Estos son los comentarios de HTML-->
 /*Estos son los comentarios de CSS*/
+
+SERÍA INTERESANTE REVISAR CORRECCIÓN DE EVA Y CAROL:
+Desde el principio del día 14 - Hasta 0:25
+
+SERÍA INTERESANTE REVISAR CORRECCIÓN DE DAVID Y JENNY:
+Desde el 0:45 del día 14 - Hasta 
+SOLUCION PROBLEMAS HEADER
+0:54-1:02
+
+mirar solución label
+1:50-1:59
+
+La semantica WEB permite que la información se comparte y reutilizada entre aplicaciones empresas y comunidades
+La semántica WEB es una extensión de la web/intenet actual donde la informacion está dada bien definida, para conectar de una mejor manera computadoras y personas para poder trabajar de forma conjunta.
+Con la semantic WEB ponemos una información extra pa
+
+La web semántica es un enfoque para organizar y presenar la información en la web de una manera que las computadoras pueden comprender el significado y el contexto de los datos, facilitando así la colaboracíon entre diferentes 
+TERMINAR VIDEO MAÑANA 2:56
