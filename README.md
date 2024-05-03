@@ -296,3 +296,6 @@ Con la semantic WEB ponemos una información extra pa
 
 La web semántica es un enfoque para organizar y presenar la información en la web de una manera que las computadoras pueden comprender el significado y el contexto de los datos, facilitando así la colaboracíon entre diferentes 
 TERMINAR VIDEO MAÑANA 2:56
+
+
+Un article es único e independiente no puede contener una section ya que es una agrupación de elementos similares de la WEB. Por el conterio una section si puede contener una 
