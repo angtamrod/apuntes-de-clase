@@ -308,6 +308,8 @@ Lo que buscamos con la semántica web es tener más control con la manera que te
 El article puede contener múltiples cosas no hay una respuesta correcta simplemente ayuda a los navegadores y a los usuarios a tratar de comprender nuestro código. Sirve para hacer un buen SEO, ya que si tenemos bien utilizada nuestra semántica WEB el navegador puede sacar ciertos elementos y hacer publicidad automática.
 
 
+NOMENCLATURAS CSS
+Sirven para organizar mejor todo el documento CSS y utilizar un mismo documento CSS por varias personas
 
 
 <!--SHORTCUTS DE VISUAL ESTUDIO CODE-->
@@ -346,3 +348,12 @@ fux-jmif-nnv
 
 
 seleccionar Editar>Buscar y reemplazar o presionando CTRL+F.
+
+
+REPASAR DÍA 16 MINUTO 0:56 HASTA lo que sea / retomar 1:49
+
+:root es similar  al (*) que es el selector de CSS
+
+cuando ponemos un style inline (dentro de la etiqueta) tiene más especificidad. No es recomendable
+
+Dejaremos de usar los IDs para CSS porque lo dejaremos para JavaScript
