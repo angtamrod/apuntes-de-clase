@@ -4,25 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        * {
+        margin: 0;
+        padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+    body{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+        .header{
+            display: flex;
+            flex-direction: column;
+            background-color: green;
+        }
+        .nav{
+            
+            flex-direction: row;
+            justify-content: center;
+            align-content: center;
+            gap: 30px;
+            background-color: green;
+        }
+        .main{
+           display: flex; 
+           flex-direction: column;
+
+        }
+        .section{
+            display: flex;
+            flex-direction: row;
+        }
+        .aside{
+            display: flex;
+            flex-direction: column;
+        }
+        .footer{
+            background-color: green;
+        }
+
+        .menu{
+    display: flex;
+    flex-direction: row;
+    float: right;
+    list-style-type: none;
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+
+}
+
+.menu li{
+    float: right;
+    margin-right: 1%;
+}
+
+.menu li a{
+    color: white;
+    text-decoration: none;
+
+}
+
+.dropdown{
+    position: relative;
+    
+
+}
+
+.dropdown-menu{
+    display: none;
+    position: absolute;
+    background-color: #98D1CA;
+    width: 140px;
+    margin: 10px;
+    left: 0;
+        top: 100%;
+
+
+    list-style-type: none;
+    
+}
+.dropdown:hover .dropdown-menu{
+    display: block;
+
+}
+    </style>
 </head>
 <body>
-    <header>
+    <header class="header">
 
     </header>
-
-    <nav>
-
+    <nav class="nav">
+        <ul class="menu">    
+            <li class="dropdown"><a href="#" >Aventuras</a>
+                <ul class="dropdown-menu">
+                    <li><a href="hojasecundaria.html">África</a></li>
+                    <li><a href="hojasecundaria.html">América</a></li>
+                    <li><a href="hojasecundaria.html">Asia</a></li>
+                    <li><a href="hojasecundaria.html">Europa</a></li>
+                    <li><a href="hojasecundaria.html">Oceanía</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html" >Login</a></li>
+            <li><a href="formularioconfirmacion.html">Formulario</a></li>
+            <li><a href="tyyc.html">Términos Y Condiciones</a></li>
+            <li><a href="miperfil.html">Mi Perfil</a></li>
+        </ul> 
     </nav>
+    
 
-    <main>
+    <main class="main">
         <section>
         </section>
         <section>
         </section>
         <section>
         </section>
-
     </main>
+
+
     <aside>
 
     </aside>

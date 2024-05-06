@@ -265,37 +265,84 @@ A la hora de organizar el layout el header el main y el footer son COLUMNAS, ya 
 Para repetir el número de elementos que quieres utilizar ponemos el nombre del elemento (li), asterisco(*) ponemos seguido el número de veces (5)que los quieres ver:
   li*5
 
+
 Como especificar que el contenido ocupe todo lo que sobra de espacio en una página:
   height: 100vh; /*100% del view height*/
 
 
 Todos los elementos STICKY y FIXED van con POSITION y NO CON DISPLAY FLEX
-
 Los UL no pueden tener otro elemento que no sean LI
-
 Los formularios son una manera de comunicarnos con el servidor haremos consultas (REQUEST) de GET y de POST.
+
+
 
 FORMAS DE PONER COMENTARIOS EN VISUAL STUDIO CODE:
 <!--Estos son los comentarios de HTML-->
 /*Estos son los comentarios de CSS*/
 
+
+<!--COSAS PENDIENTES PARA VER-->
 SERÍA INTERESANTE REVISAR CORRECCIÓN DE EVA Y CAROL:
 Desde el principio del día 14 - Hasta 0:25
-
 SERÍA INTERESANTE REVISAR CORRECCIÓN DE DAVID Y JENNY:
 Desde el 0:45 del día 14 - Hasta 
 SOLUCION PROBLEMAS HEADER
 0:54-1:02
-
 mirar solución label
 1:50-1:59
 
-La semantica WEB permite que la información se comparte y reutilizada entre aplicaciones empresas y comunidades
-La semántica WEB es una extensión de la web/intenet actual donde la informacion está dada bien definida, para conectar de una mejor manera computadoras y personas para poder trabajar de forma conjunta.
+
+
+<!--SEMÁNTICA WEB-->
+La semantica WEB permite que la información se comparte y reutilizada entre aplicaciones empresas y comunidades.
+La semántica WEB es una extensión de la web/intenet actual donde la informacion está dada, bien definida, para conectar de una mejor manera computadoras y personas para poder trabajar de forma conjunta.
+En este caso la información es la página WEB que estamos creando. Y lo que buscamos es que este contenido se pueda compartir entre difentes, comunidades, personas, empresas, ordenadores... 
+
 Con la semantic WEB ponemos una información extra pa
 
-La web semántica es un enfoque para organizar y presenar la información en la web de una manera que las computadoras pueden comprender el significado y el contexto de los datos, facilitando así la colaboracíon entre diferentes 
+La web semántica es un enfoque para organizar y presentar la información en la web de una manera que las computadoras pueden comprender el significado y el contexto de los datos, facilitando así la colaboracíon entre diferentes sistemas y usuarios.
 TERMINAR VIDEO MAÑANA 2:56
 
+Lo que buscamos con la semántica web es tener más control con la manera que tenemos de organizar la web por zonas y elementos. 
+<!--Para esto busca en google ejemplos de semantic tags-->
+El article puede contener múltiples cosas no hay una respuesta correcta simplemente ayuda a los navegadores y a los usuarios a tratar de comprender nuestro código. Sirve para hacer un buen SEO, ya que si tenemos bien utilizada nuestra semántica WEB el navegador puede sacar ciertos elementos y hacer publicidad automática.
 
-Un article es único e independiente no puede contener una section ya que es una agrupación de elementos similares de la WEB. Por el conterio una section si puede contener una 
+
+
+
+<!--SHORTCUTS DE VISUAL ESTUDIO CODE-->
+# VSC Shortcuts interesantes
+
+- `Ctrl + Shift + P` : Buscar cualquier comando (Ver uso de > y @)
+- `Ctrl + P` : Buscar cualquier archivo en el proyecto
+- `Ctrl + P` : y luego `>` : Buscar cualquier comando
+- `Ctrl + P` : y luego `@` : Buscar cualquier Símbolo/Nodo en el archivo
+
+- `Ctrl + B` : Ocultar/Mostrar el sidebar
+- `Ctrl + Shift + E` : Ver el explorador de archivos
+- `Ctrl + Shift + X` : Ver el explorador de extensiones
+- `Ctrl + Ñ` : Abrir la terminal
+- `Ctrl + Space` : Autocompletar (Trigger Suggestion)
+- `Ctrl + I` : Activar Github Copilot
+
+Podemos ver la lista completa de shortcuts en la página de [Visual Studio Code](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+o para [MacOS](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
+o haciendo `Ctrl + K` y luego `Ctrl + S`.
+
+## Selección de texto
+- `Ctrl + L` : Seleccionar la línea actual + la siguiente
+- `Ctrl + D` : Seleccionar la siguiente ocurren
+- `Ctrl + D` : Seleccionar la siguiente ocurrencia de la selección
+- `Ctrl + Shift + L` : Seleccionar todas las ocurrencias de la selección
+- `Alt + Shift + Right` : Ampliar la seleccion: "Palabra -> Linea -> Bloque"
+- `Alt + Shift + Left` : Reducir la selección: "Bloque -> Linea -> Palabra"
+
+## Movimiento por el código
+
+- `Alt + Up` : Mover la línea actual hacia arriba
+- `Alt + Down` : Mover la línea actual hacia abajo
+- `F2` : Cambiar el nombre de la variable en todas sus ocurrencias
+fux-jmif-nnv 
+
+
+seleccionar Editar>Buscar y reemplazar o presionando CTRL+F.
