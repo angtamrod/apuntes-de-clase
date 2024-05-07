@@ -357,3 +357,6 @@ REPASAR DÍA 16 MINUTO 0:56 HASTA lo que sea / retomar 1:49
 cuando ponemos un style inline (dentro de la etiqueta) tiene más especificidad. No es recomendable
 
 Dejaremos de usar los IDs para CSS porque lo dejaremos para JavaScript
+
+Para poner una clase es es mejor poner la clase en inglés
+De cara al proyecto final no deberíamos usar la 
