@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad MQ y BEM</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/media-query.css">
+    
+</head>
+<body>
+    <main class="contenido">
+
+
+        <!--EL TÍTULO PRINCIPAL-->
+        <h1 class="titulo titulo--mobile">Mobile</h1>
+        <h1 class="titulo titulo--tablet">Tablet</h1>
+        <h1 class="titulo titulo--desktop">Desktop</h1>
+
+        <div style="display: flex; justify-content: center; height: ;"></div>
+
+        <!--IMAGEN PRINCIPAÑ-->
+
+        <picture class="imagen">
+            <!--Fuentes de imagen alternativas de acuerdo al MQ-->
+            <source media="(min-width: 768px) and (max-width:1024px)" srcset="/dia18/media-query/imgs/tablet.png">
+            <source media="(min-width:1024px)" srcset="/dia18/media-query/imgs/desktop.png">
+            <img class="imagen__img" src="/dia18/media-query/imgs/mobile.png" alt="imagen-principal">
+        </picture>
+       
+
+    </main>
+</body>
+</html>

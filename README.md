@@ -360,3 +360,10 @@ Dejaremos de usar los IDs para CSS porque lo dejaremos para JavaScript
 
 Para poner una clase es es mejor poner la clase en inglés
 De cara al proyecto final no deberíamos usar la 
+
+en EL METODO BEM los modificador puede ser modificador del elememto o del bloque si es del elemento tenemos que poner primero la clase del bloque espacio elemento y el modificador directamente
+Ejemplos de opciones de bloque/elemento/modificador
+bloque
+bloque__elemento
+bloque__elemento--modificador
+bloque--modificador

@@ -1,0 +1,64 @@
+.contenido{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*Cuando ponemos estas reglas colocamos los elementos en el centro de la caja*/
+    background-color: rgb(131, 200, 211);
+
+    transition: background-color 2s;
+}
+
+.titulo{
+    font-size: 2rem;
+    color: rgb(67, 64, 64);
+}
+
+.titulo--mobile{
+    display: block;
+}
+
+/*Elementos ocultos*/
+
+.titulo--tablet, .titulo--desktop {
+    display: none;
+
+}
+
+.imagen{
+
+}
+
+.imagen_img{
+    width: 200px;
+}
+
+/*Implementación de Media Queries después de nuestro código General*/
+
+/*Versión de tablet*/
+@media screen and (min-width: 768px) and (max-width:1024px){
+    .titulo--tablet{
+        display: block;
+    }
+    .titulo--mobile, .titulo--desktop{
+        display: none;
+    }
+    .contenido{
+        background-color: rgb(167, 211, 131);;
+    }
+}
+
+/*Versión de desktop*/
+@media screen and (min-width:1024px){
+    .titulo--desktop{
+        display: block;
+    }
+    .titulo--mobile, .titulo--tablet{
+        display: none;
+    }
+    
+    .contenido{
+        background-color: rgb(237, 206, 96);;
+    }
+}
