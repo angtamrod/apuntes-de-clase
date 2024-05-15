@@ -11,25 +11,25 @@ no recomienda exportar una fuente con @import
 
 
 @font-face{
-    font-family: "Crotah;"; /*Nombre a utilizar elegido por el usuario*/
+    font-family: "Crotah"; /*Nombre a utilizar elegido por el usuario*/
     src: url("../fonts/CrotahFreeVersionItalic-z8Ev3.ttf") format("truetype");
 }
 
 *{
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
 body{
-    display:flex;
+    display: flex;
     flex-direction: column;
     height: 100vh;
 }
 
 .u-txtCrotah{
-    font-family: "Crotah"
+    font-family: "Crotah";
 }
 
 .Main{
@@ -45,7 +45,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:10px 20px;
+    padding:10px 20px; /*Vertical y horizontal Si fueran 3 valores serian: Vertical, horizontal, Izq/Derecha*/
     background: gray;
     box-shadow: 0 2px 5px rgb(0,0,0,0.1);
 
