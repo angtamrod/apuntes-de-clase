@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Claro/Oscuro</title>
+
+    <style>
+
+        /*Pimero hacemos unos estilos para el modo claro y luego para el modo oscuro*/
+
+        
+        /*------------------------------------*/
+        /*Inicio de estilos para el Modo Claro*/
+        /*------------------------------------*/
+        body {
+            background-color: white;
+            color: #333;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .caja {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray;
+            margin: 20px auto;
+        }
+
+
+
+        /*------------------------------------*/
+
+
+        /*------------------------------------*/
+        /*Inicio de estilos para el Modo Claro*/
+        /*------------------------------------*/
+        body.modo-oscuro {
+            /*pongo delante de modo oscuro la palabra "body" para saber que hace referencia al body. */
+            background-color: #333;
+            color: white;
+        }
+
+        body.modo-oscuro .caja {
+            background-color: #222;
+
+        }
+
+        /*este MQ es para detectar la preferencia del usuario en caso de usar modo oscuro
+
+        @media (prefers-solor-scheme: dark)
+*/
+
+
+    </style>
+</head>
+
+<body class="">
+
+    <main class="contenido">
+
+        <h1>Nuestra primer Web Inteligente</h1>
+        <img src="https://www.20i.com/blog/wp-content/uploads/2020/10/I-love-JavaScript.png" alt="I-love-JavaScript">
+
+        <div class="caja"> Contenido</div>
+
+        <button id="btn-Claro-OScuro">Modo Claro/ Oscuro</button>
+    </main>
+
+    <script>
+
+        // agarramos lo que queremos de nuestro documento
+
+                //1) ponemos el botón con el id #btn-Claro-OScuro 
+                const btn = document.querySelector("#btn-Claro-OScuro")
+                //2) ponemos el body con el tag <body>
+                const elbody = document.querySelector("body")
+                const micaja = document.querySelector(".caja") /*ponemos un punto delante porque estamos seleccionando la caja que ya está puesto como clase*/
+
+        // le decimos el evento que queremos que haga 
+        micaja.addEventListener("click", () => {
+
+            alert("CLICK EN CAJA GRANDE")
+          
+
+        })
+        console.log(elbody)
+
+        //3) cuando le hago click a "btn"
+        btn.addEventListener("click", () => {
+
+            //4)cuando le hago clic a "btn", poner la clase "modo-oscuro" al body "elbody"
+
+            //alert("HOLAAAA");
+
+            /*"toggle" agrega la clase cuando no existe y la quita cuando sí existe*/
+            elbody.classList.toggle("modo-oscuro") /*en este caso va "modo-oscuro" sin punto porque es una clase en "classList"*/
+
+        })
+
+
+
+    </script>
+
+</body>
+
+</html>

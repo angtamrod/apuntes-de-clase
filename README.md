@@ -38,7 +38,13 @@ Si estos elementos no están definidos estarán a 0
 
 El editor siempre priorizará la última regla colocada o en su defecto la más específica
 
-
+WIDTH:
+Indica el ancho de un elemento, establece el ancho del área del contenido, pero si está puesto el box-sizing: border-box; Establece el ancho del area del borde (Es decir lo que ocupa la caja)
+Lo podemos definir con medidas como:
+ Length: Define el ancho como un valor absoluto. Es más concreto, menos variable. (px, em (Esto mide a través de la medidas de las letras, en concreto de una letra mayúscula M))
+ Porcentaje: Especifica el ancho como porcentaje de la anchura del bloque contenedor
+ Auto: El navegador calculará y seleccionará el ancho para el elemento especificado.
+ max-content: Selecciona el ancho preferido intrínseco
 
 
 El ID es un atributo que sirve para identificar un elemento concreto del código y se escribe dentro de la estiqueta la que corresponda y luego en el head se coloca dentro de una etiqueta <style> en el <head> se colocará una almohadilla antes del nombre que hayamos escogido para referenciarlo. Ejemplo:
@@ -367,3 +373,8 @@ bloque
 bloque__elemento
 bloque__elemento--modificador
 bloque--modificador
+
+para seleccionar 2 clases lo ponemos así
+ .clase.boton{
+ }
+Seguido solo en el caso de queramos seleccionar un elemento con dos clases

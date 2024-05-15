@@ -24,7 +24,7 @@ Propiedades númericas_
 - margin 
 - border-width 
 - opacity
-- transform
+- transform (prop como scale, rotate, translate etc...)
 Propiedades de color:
 - color
 - background-color
@@ -62,7 +62,9 @@ Las transiciones se definen mediante la propiedad `transition` y se pueden preso
 - none: ninguna propiedad 
 - property: Una o más separadas con coma
 
+
 ``` css
+/*segmentar la transición el distintas reglas (no recomendada)*/
 h1{
    transition: all 2s;
    transition: none;

@@ -1,0 +1,92 @@
+
+/*Las variables es como un contenedor de información*/
+:root{
+    --bg-primary: #fff1b1b;
+    --bg-secondary: #f0f0f0;
+    --txt-primary: #000;
+    --txt-secondary: #222;
+
+    --box-shadow: 1px 1px 5px rgb(0,,0,0,0.5);
+}
+/*Modo claro/oscuro*/
+.u-Dark{
+    --bg-primary: #000;
+    --bg-secondary: #222;
+    --txt-primary: #fff;
+    --txt-secondary: #ddd;
+
+    --box-shadow: 1px 1px 5px rgb(255,255,255,0.5);
+}
+
+/*Clases reutilizables (UTILITIES)*/
+.u-bgPrimary{
+    background: var(--bg-primary);
+}
+
+.u-bgSecondary{
+    background: var(--bg-secondary);
+    
+}
+.u-txtPrimary{
+    color: var(--txt-primary);
+}
+.u-txtSecondary{
+    color: var(--txt-secondary);
+}
+.u-boxShadow{
+    box-shadow: var(--box-shadow);
+}
+
+
+
+
+
+.u-flexCol{
+    display: flex;
+    flex-direction: column;
+}
+
+.u-flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
+/*Controller*/
+.Controllers{
+    position: fixed;
+    bottom:20px;
+    right: 10px;
+    /*ESTO SIRVE PARA CENTRARLO DE OTRA MANERA
+    left:50%;
+    transform: translate(-50%)*/
+
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+
+    background: gray;
+}
+
+.Btn{
+color: var(--txt-primary);
+background: var(--bg-primary);
+border: none;
+box-shadow: var(--box-shadow);
+
+cursor: pointer;
+padding: 10px;
+min-width: 100px;
+border-radius: 10px;
+
+display: flex;
+justify-content: center;
+align-items:center;
+
+}
+
+.Btn--icon{
+    min-width: unset;
+    border-radius: 100%;
+
+}
+
