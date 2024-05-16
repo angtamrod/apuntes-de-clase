@@ -378,3 +378,17 @@ para seleccionar 2 clases lo ponemos así
  .clase.boton{
  }
 Seguido solo en el caso de queramos seleccionar un elemento con dos clases
+
+
+:root {
+  Es como mencionar al HTML pero como css utiliza multiples dispositivos en esos dispositivos sería root. Para mencionar todo el HTML es mejor usar estro
+}
+
+el margin si usamos rem no depende del tamaño de fuente o font-size y y cuando usamos en si 
+
+Existe o
+
+En CSS y JS cuando usamos paréntesis estamos haciendo funciones:
+function sumar(num1, num2) {
+  devolver num1 + num2;
+}
