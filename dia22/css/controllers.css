@@ -17,7 +17,10 @@
     --txt-secondary: #ddd;
 
     --box-shadow: 1px 1px 5px rgb(255,255,255,0.5);
+    
 }
+
+
 
 
                         /*Clases reutilizables (UTILITIES)*/
@@ -33,25 +36,29 @@
 }
 */
 .u-bgPrimary{
-    background: var(--bg-primary);
+    background: var(--bg-primary); /*Background solo es una abreviación de background-color*/
+    transition: background-color 0.3s ease;
 } /*A la utilidad .u-bgPrimary le daremos la variable --bg-primary lo que significa que le aplicará a todo lo que le demos esta clase la variable --bg-primary que este caso cambiará el fondo a este color:
     --bg-primary: #fff;
 */
 
 .u-bgSecondary{
-    background: var(--bg-secondary);   
+    background: var(--bg-secondary); 
+    transition: background-color 0.3s ease;  
 } /*A la utilidad .u-bgSecondary le daremos la variable --bg-secondary lo que significa que le aplicará a todo lo que le demos esta clase la variable --bg-secondary que este caso cambiará el fondo a este color:
     --bg-secondary: #f0f0f0;
 */
 
 .u-txtPrimary{
     color: var(--txt-primary);
+    transition: color 0.3s ease;
 } /*A la utilidad .u-txt-Primary le daremos la variable --bg-primary lo que significa que le aplicará a todo lo que le demos esta clase la variable --bg-primary que este caso cambiará el fondo a este color:
 --txt-primary: #000;
 */
 
 .u-txtSecondary{
     color: var(--txt-secondary);
+    transition: color 0.3s ease;
 }/*A la utilidad .u-txt-Secondary le daremos la variable --bg-secondary lo que significa que le aplicará a todo lo que le demos esta clase la variable --bg-secondary que este caso cambiará el fondo a este color:
 --txt-secondary: #222;
 */
