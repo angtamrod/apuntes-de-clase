@@ -14,20 +14,30 @@
         /*------------------------------------*/
         /*Inicio de estilos para el Modo Claro*/
         /*------------------------------------*/
+
+        /*Esto serán los estilos que utilizaremos para el modo claro*/
+        
         body {
+            /*PRIMERO: Pondremos el body con un fondo blanco*/
             background-color: white;
             color: #333;
+            /*El color del tipo de letra en un gris*/
         }
 
         main {
             max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
+            margin: 0 auto; /*El margin vertical es 0 y el horizontal es auto
+            Un valor: Se aplica a los cuatro lados
+            Dos valores: (El primero el vertical) (el segundo HORIZONTAL)
+            Tres valores: (Arriba) (Horizontal) (Abajo)
+            Cuatro valores: (Arriba) (Derecha) (Abajo) (Izquierda)*/
+            text-align: center; /*Alinea todo en el centro*/
         }
 
         .caja {
-            width: 200px;
-            height: 200px;
+            /*Esto afecta a la caja (div) que contiene la palabra contenido*/
+            width: 200px; /*El ancho de la caja*/
+            height: 200px;/*El alto de la caja*/
             background-color: lightgray;
             margin: 20px auto;
         }
@@ -38,8 +48,11 @@
 
 
         /*------------------------------------*/
-        /*Inicio de estilos para el Modo Claro*/
+        /*Inicio de estilos para el Modo Oscuro*/
         /*------------------------------------*/
+
+        /*Para poner el modo oscuro le podemos añadi la clase modo oscuro al body*/
+        /*Estos son los estilos que veremos para el modo oscuro*/
         body.modo-oscuro {
             /*pongo delante de modo oscuro la palabra "body" para saber que hace referencia al body. */
             background-color: #333;
@@ -51,34 +64,60 @@
 
         }
 
-        /*este MQ es para detectar la preferencia del usuario en caso de usar modo oscuro
+        /*
+        Hay un MQ que se utiliza para ve si nuestro dispositivo está en landscape (Vertical) o en portrait (horizontal)
+            @media only screen and (orientation: landscape){
+                body {
+                    background-color: lightblue;
+                }
+            }
 
-        @media (prefers-solor-scheme: dark)
-*/
+            @media only screen and (orientation: portrait){
+                body {
+                    background-color: lightblue;
+                }
+            }
+       
+        Este MQ es para detectar la preferencia del usuario en caso de usar modo oscuro (dark/light). Es decir que su dispositivo esté configurado previamente en modo oscuro.
+            @media (prefers-color-scheme: dark){
+            
+            }
+        */
 
 
     </style>
 </head>
 
-<body class="">
+<body>
 
     <main class="contenido">
 
         <h1>Nuestra primer Web Inteligente</h1>
-        <img src="https://www.20i.com/blog/wp-content/uploads/2020/10/I-love-JavaScript.png" alt="I-love-JavaScript">
+        <img src="https://d6ce0no7ktiq.cloudfront.net/images/preview/2018/11/13/design-31776/template-sticker-600x600.png" alt="I-love-JavaScript">
 
         <div class="caja"> Contenido</div>
 
-        <button id="btn-Claro-OScuro">Modo Claro/ Oscuro</button>
+        <button id="btn-Claro-OScuro">Modo Claro/ Oscuro</button> <!--Este es un botón que sirve para poner la web en modo claro/modo oscuro-->
     </main>
 
-    <script>
+    <script> //Siempre se pone debajo de todo lo que es el HTML pero dentro del body
 
-        // agarramos lo que queremos de nuestro documento
+    //JavaScript es un lenguaje de programación, mientras que CSS y HTML dan órdenes sobre cómo se ven las cosas en pantalla JavaScript nos permite interactuar con ellos: Cuentas matrmáticas, crear objetos nuevos
+    //Es una buena forma de modificar nuestro html ya preestablecido
+    // en lenguaje de programación las cosas que están a la derecha se guardan a la izquierda
 
-                //1) ponemos el botón con el id #btn-Claro-OScuro 
+    //Una variable es un elemento que guarda información, hay variables que pueden cambiar y variables que NO PUEDEN CAMBIAR (Constantes (cons)). Se comporta como una estantería donde contenemos cosas y cuando las llamamos o las activamos.
+
+    //Primero creamos ese elemento de la estantería que contendrá el botón de claro-ocuro
+    
+        // Primero seleccionamos lo que queremos de nuestro documento. En este caso declararemos el body, el botón y la caja como una constante. En JS agarramos cosas de nuestro HTML de la misma forma que con CSS con clases, ID y etiquetas
+
+                //1) La hacemos constante porque no va a cambiar nunca. Ponemos el botón con el id #btn-Claro-OScuro. 
+                //El (btn) que vemos abajo es un nombre que le ponemos para declarar la constante (cons) NO TIENE QUE COINCIDIR CON NADA. 
+                //Lo que estamos diciendo es que de mi documento html (.document) seleccioname (.querySelector) y hacemos un ID ("#btn-Claro-OScuro") que le pondremos al <button> 
                 const btn = document.querySelector("#btn-Claro-OScuro")
                 //2) ponemos el body con el tag <body>
+                //Lo que estamos diciendo es que de mi documento html (.document) seleccioname (.querySelector) y nombramos el body ("body") que le pondremos al <body>
                 const elbody = document.querySelector("body")
                 const micaja = document.querySelector(".caja") /*ponemos un punto delante porque estamos seleccionando la caja que ya está puesto como clase*/
 
@@ -88,22 +127,30 @@
             alert("CLICK EN CAJA GRANDE")
           
 
-        })
-        console.log(elbody)
+        });
+        console.log(elbody) //Esto sirve para ver si el navegador o editor de código encuentra el elemeno al que está haciendo referencia para esto usaremos el nombre que le hemos dado en JS const elbody (const elbody = document.querySelector("body"))
 
-        //3) cuando le hago click a "btn"
+        //3) cuando le hago click a "btn" quiero que suene el click
         btn.addEventListener("click", () => {
 
-            //4)cuando le hago clic a "btn", poner la clase "modo-oscuro" al body "elbody"
+        //4)cuando le hago clic a "btn", poner la clase "modo-oscuro" al body "elbody"
 
+            //Esto se hace para que aparezca un mensaje que cuando le hago click me dice: holaaaaaaa
             //alert("HOLAAAA");
+            
+            /*La propiedad (.classList) sirve para hacer referencia a las clases del CSS por eso no hay que ponerle la clase en este caso ("modo-oscuro") tenga que llevar un punto delante.
+            La propiedad (.add) para añadir la clase a la que queremos hacer referencia mencionamos directamente la clase add("modo-oscuro")
+                elbody.classList.add("modo-oscuro")
+            NO UTILIZAREMOS ESTO PORQUE SOLO LO REALIZA UNA VEZ NO DEJA REVERTIR EL CAMBIO. Para esto utilizaremos TOGGLE más abajo
+            */
 
-            /*"toggle" agrega la clase cuando no existe y la quita cuando sí existe*/
-            elbody.classList.toggle("modo-oscuro") /*en este caso va "modo-oscuro" sin punto porque es una clase en "classList"*/
+            /*La propiedad (.toggle) le pone la clase, en este caso ("modo-oscuro") hace que si tiene la clase que hemos seleccionado se la quita y si no la tiene se la pone.*/
+            elbody.classList.toggle("modo-oscuro") 
+            /*en este caso va "modo-oscuro" sin punto porque es una clase en "classList"*/
 
-        })
+        });
 
-
+        //Cuando ponemos .innerHTML estamos añadiendo algo nuevo al documento
 
     </script>
 

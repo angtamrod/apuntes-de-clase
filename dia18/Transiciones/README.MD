@@ -58,7 +58,7 @@ Las transiciones se definen mediante la propiedad `transition` y se pueden preso
 }
 ```
 ## Transitions properties
-- all: todas las propiedades
+- all: todas las propiedades <!--NO LO RECOMIENDO-->
 - none: ninguna propiedad 
 - property: Una o más separadas con coma
 
@@ -86,6 +86,8 @@ h1{
 - `easy-out`: velocidad rápida - luego lenta 
 - `easy-in-out`:vlocidad lenta - rápida - lenta (mix entre easy-in y easy-out)
 - `cubic-bezier()`Función de timing personalizada
+
+[Para comprobar la función de cubic-bezier](https://cubic-bezier.com/#.17,.67,.83,.67)
 
 ``` css
 .box{
