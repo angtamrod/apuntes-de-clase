@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pruebas JS</title>
+</head>
+<body>
+    <h1>Bienvenidos a JavaScript</h1>
+
+    <button id="btnSuma">Suma+1</button>
+    <button id="btnResta">Resta-1</button>
+    <div id="resultado">0</div>
+
+    <!--<script src="js/miweb.js"></script>-->
+
+    <script>
+
+        //1. Declaramos Variables
+        const miBotonSuma = document.getElementById("btnSuma"); //Así declaramos que cuando nos referimos al botón que suma, nos referimos al botón con el ID: #btSuma. Es constante que ese botón le daremos es ID
+        const miBotonResta = document.getElementById("btnResta"); //Es constante que ese botón le daremos es ID
+        const divResultado = document.getElementById("resultado"); //Es constante que ese div le daremos es ID
+
+        let number=0; //El número que dará resultante va variando así que le daremos una variable "let"
+
+        //Hacer una calculadora que multiplique por 5
+        /*num= number * 5;
+        //Hacer una calculadora que divida por 2
+        num= number / 2;*/
+        
+        //2. Manipulamos el DOM
+        miBotonSuma.addEventListener("click", () => {
+            number = number +1; //Incrementando el numero en 1
+            divResultado.innerText= number;
+            /*miBoton.innerText= "Nuevoo Textoo!";*/
+        });
+
+        miBotonResta.addEventListener("click", () => {
+            number = number -1; //Incrementando el numero en 1
+            divResultado.innerText= number;
+            /*miBoton.innerText= "Nuevoo Textoo!";*/
+        });
+
+
+        /*let numero=10;
+        console.log("Numero vale: ", numero);
+        console.error("Soy un error!!!");
+        
+        const nombres=["Blanco", "Negro", "Rojo", "Azul"];
+        console.table(nombresDeColores)*/
+
+
+    </script>
+</body>
+</html>

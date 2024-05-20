@@ -398,3 +398,11 @@ Main Axis (x) por defecto
 white-space:no-wrap para que no se vaya para abajo
 
 <p> es un elemento en bloque
+
+En el proyecto final hay que linkear los archivos JavaScript
+
+Es mejor tener el HTML por un lado y el JS por otro
+
+Siempre que va una linea de JS va punto y coma (;) y dentro de los objetos  va (,)
+Los formularios no deben funcionar en el proyecto final
+No dejan usar onClick para el proyecto final
