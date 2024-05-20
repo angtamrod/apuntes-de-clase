@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pruebas JS</title>
+    <style>
+
+    </style>
 </head>
 <body>
     <h1>Bienvenidos a JavaScript</h1>
 
-    <button id="btnSuma">Suma+1</button>
-    <button id="btnResta">Resta-1</button>
-    <div id="resultado">0</div>
+    <div class="boton">
+    <button class="" id="btnSuma">Suma</button>
+    <button class="" id="btnResta">Resta</button>
+    <button id="btnMultiplica">Multiplica por 5</button>
+    <button id="btnDivide">Divide entre 2</button>
+    </div>
+    <div class="resultado" id="resultado">0</div>
 
     <!--<script src="js/miweb.js"></script>-->
 
@@ -19,6 +26,8 @@
         //1. Declaramos Variables
         const miBotonSuma = document.getElementById("btnSuma"); //Así declaramos que cuando nos referimos al botón que suma, nos referimos al botón con el ID: #btSuma. Es constante que ese botón le daremos es ID
         const miBotonResta = document.getElementById("btnResta"); //Es constante que ese botón le daremos es ID
+        const miBotonMultiplica = document.getElementById("btnMultiplica");
+        const miBotonDivide = document.getElementById("btnDivide");
         const divResultado = document.getElementById("resultado"); //Es constante que ese div le daremos es ID
 
         let number=0; //El número que dará resultante va variando así que le daremos una variable "let"
@@ -37,6 +46,18 @@
 
         miBotonResta.addEventListener("click", () => {
             number = number -1; //Incrementando el numero en 1
+            divResultado.innerText= number;
+            /*miBoton.innerText= "Nuevoo Textoo!";*/
+        });
+
+        miBotonMultiplica.addEventListener("click", () => {
+            number = number *5; //Incrementando el numero en 1
+            divResultado.innerText= number;
+            /*miBoton.innerText= "Nuevoo Textoo!";*/
+        });
+
+        miBotonDivide.addEventListener("click", () => {
+            number = number /2; //Incrementando el numero en 1
             divResultado.innerText= number;
             /*miBoton.innerText= "Nuevoo Textoo!";*/
         });
