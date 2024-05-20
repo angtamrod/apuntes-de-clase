@@ -392,3 +392,9 @@ En CSS y JS cuando usamos paréntesis estamos haciendo funciones:
 function sumar(num1, num2) {
   devolver num1 + num2;
 }
+
+Main Axis (x) por defecto
+
+white-space:no-wrap para que no se vaya para abajo
+
+<p> es un elemento en bloque

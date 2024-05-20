@@ -74,8 +74,6 @@ h1{
 ## Transition Duration y Delay 
 
 > `Duration`: Tiempo que dura la transición en completarse
-
-
 > `Delay`: Tiempo que se demora la animación antes de comenzar
 
 # Timing Functions
@@ -84,8 +82,8 @@ h1{
 - `linear`: velocidad constante
 - `ease-in`: velocidad lenta- luego rápida
 - `easy-out`: velocidad rápida - luego lenta 
-- `easy-in-out`:vlocidad lenta - rápida - lenta (mix entre easy-in y easy-out)
-- `cubic-bezier()`Función de timing personalizada
+- `easy-in-out`:velocidad lenta - rápida - lenta (mix entre easy-in y easy-out)
+- `cubic-bezier()`:Función de timing personalizada
 
 [Para comprobar la función de cubic-bezier](https://cubic-bezier.com/#.17,.67,.83,.67)
 
@@ -103,7 +101,3 @@ h1{
     background-color; blue;
 }
 ```
-
-
-
-

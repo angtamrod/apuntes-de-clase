@@ -9,7 +9,7 @@ Se usa sobre todo con preprocesadores, se usa con frameworks o librerías como: 
 - ComponentName (PascalCase)
 - ComponentName-elementName (-camelCase)
 - ComponentName--modifierName (--camelCase)
-- ComponentName.is-stateOfComponent (isPascalCase, hasPascalCase, focus.camelCase, onPascalCase)
+- ComponentName.isstateOfComponent (isPascalCase, hasPascalCase, focus.camelCase, onPascalCase)
 - u-utilityName(u-camelCase)
 - Variables
   

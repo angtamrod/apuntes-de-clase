@@ -81,12 +81,10 @@ height: 200px;
     /*flex-direction: column-reverse;   (Tomará la dirección en vertical (en caso de estar en horizontal) e invertirá el orden de los elementos )*/ 
 }
 .ej2{
-/*El flex-wrap sirve para que en el caso de que los elemetos no quepan en la misma línea los pasará abajo*/  
-    /*flex-wrap: nowrap;  (sin flex-wrap por defecto)*/
-    
+/*El flex-wrap sirve para que en el caso de que los elementos no quepan en la misma línea los pasará abajo*/  
+/*flex-wrap: nowrap;  (sin flex-wrap por defecto)*/
     flex-wrap: wrap;  /*(Pasará los elementos de la misma línea hacia abajo si no caben al estrecharlos)*/
-    
-    /*flex-wrap: wrap-reverse; Lo que hace es que al estrecharse en vez de mandar los elementos hacia abajo los amontona arriba*/
+/*flex-wrap: wrap-reverse; Lo que hace es que al estrecharse en vez de mandar los elementos hacia abajo los amontona arriba*/
 
 }
 
@@ -94,23 +92,19 @@ height: 200px;
 
    flex-direction: row;
 
+
 /*Justify-content sirve para colocar los elementos en la página web de forma horizontal*/
-
 /*justify-content: flex-start;  (Coloca el contenido a la izquierda)*/    
-
    justify-content: flex-end;  /*Coloca el contenido a la derecha*/ 
-
 /*justify-content: center;  (Centra el contenido)*/
-
 /*justify-content: space-between; Separa los elementos sin tener en cuenta los márgenes*/
-
 /*justify-content: space-around;  (Pone espacio entre los elementos teniendo en cuenta los márgenes) QUEDA BIEN*/
 /*justify-content: space-evenly;  (Separa poniendo el mismo espacio entre elemento y márgenes) NO SE USA TANTO*/
 }
 
 .ej4{
 align-items: flex-start; /*Los elementos estarán alineados hacia arriba*/
-/*align-items: flex-end; (Los elementos estarán alineados hacia amajo de la caja)*/
+/*align-items: flex-end; (Los elementos estarán alineados hacia abajo de la caja)*/
 /*align-items: center; (Los elementos se colocarán en el centro de la caja)*/
 /*align-items: strecht; (Estirará los elementos para que todos tengan la misma altura SOLO FUNCIONARÁ CON LA ALTURA AUTOMÁTICA)*/
 /*align-items: baseline; (los alineará en función al texto)*/

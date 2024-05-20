@@ -22,12 +22,12 @@
                 <li>Reglas CSS: Bloque de reglas</li>
             </ul>
             <style>
-                /* keyword MediaType Operador/es (breakpoint) { reglass de CSS }*/
+                
                 
                 .title {
                     color: blue;
                 }
-                
+            /* keyword MediaType Operador/es (breakpoint) { reglass de CSS }*/
                 @media screen and (min-width: 600px) {
                     .h1 {
                         color: red;
@@ -35,8 +35,6 @@
 
 
                 }
-
-               
                 @media print{
                     .title {
                         display: none;
@@ -69,14 +67,14 @@
             }
             
 
-            /*Los media queries deben ir por debajo poruqe no tienen mayor especificidad que las reglas CSS, así que al ponerlo debajo tendrá */
+            /*Los media queries deben ir por debajo porque no tienen mayor especificidad que las reglas CSS, así que al ponerlo debajo tendrá */
         </style>
 
         <h3 class="titulo2">Tips para utilizar MediaQueries</h3>
 
         <ul>
             <li>Los MQ sobreescriben las reglas de CSS anteriores, PERO no poseen mayor especificidad que las otras reglas por eso debemos agregarlas al final del documento</li>
-            <li> Deben utilizar los mismos selectores que quieran reemplazar</li>
+            <li>Deben utilizar los mismos selectores que quieran reemplazar</li>
             <li>PENSAR BIEN LOS BREAKPOINTS</li>
             <li>Podemos utilizar un @media </li>
         </ul>
@@ -118,7 +116,7 @@
 
     <ul>
         <li>Etiquetas de Link (NO RECOMENDADA): 
-            < link rel="stylesheet" href="" media="screen and (min-width:768px)"></li>
+            <link rel="stylesheet" href="" media="screen and (min-width:768px)"></li>
         <li>Etiqueta en style (NO RECOMENDADA):
             " style media= "screen and (min-width:768px)" "
         </li>

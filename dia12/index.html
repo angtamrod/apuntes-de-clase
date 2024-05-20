@@ -16,48 +16,53 @@
        ATRIBUTOS de formulario:
        "action": A quien le enviaré la información 
        podriamos poner cualquier dirección WEB con una URL de otro servidor o en este caso si queremos hacer referencia a nuestra web haremos un archivo.php
-
        "method": Tipo de request que vamos a hacer los más comunes son:
        GET y POST
        Con el método GET la información se mandará a través de la URL
        Por defecto actuará como GET pero podríamos pedirle que lo mande como POST
        El método GET tiene un límite de 2048 caracteres 
        El método POST soporta hasta 32mb
+       <form action="./recibirform.php" method="get">
 
        
        Tipos de INPUTS:
+
+       
+
        A las etiquetas de inputs también se le pueden poner clases. A todos los inputs hay que ponerles un name.
-       Inputs básicos (HTML 4.0): submit, reset, text, password, file, image y hidden. HTML4 es una versión antigua de HTML donde tenemos solo estos inputs.
-       Inputs (HTML5): button, number, tel, url, email, date, time, color range
-       Inputs (HTML 5.1): month, week, datetime.local (fecha con hora)  
-    
-       <form action="./recibirform.php" method="get">
        
-       name: Es un identificador único de la "variable"
-       
-       value: Es el valor inicial. Este texto se puede seleccionar
-       
-       required: En verdad cuando se escribe este atributo es como poner required=true pero no es necesario ponerlo en verdadero para que funcione. 
-       ES PARA HACER UN CAMPO OBLIGATORIO. Es decir el usuario no podrá enviar la información hasta que no lo rellene.
-       
-       placeholder: Es un texto que quiero mostrar en el input pero que no es el valor Ej:(Ingrese su nombre...) Cuando le damos a escribir se borra. No confundir con el "value" no lo podemos seleccionar. Es como una especie de aviso. MENSAJE AL USUARIO.
 
-       size: Modifica el tamaño de la caja, que por defecto es 20. Esto es como un estilo pero en lenguaje HTML y es preferible NO USARLO porque todo el estilo lo haremos a través del CSS.
-
-       maxlength: Especificará cuantos caracteres puede tener lo que escribamos. En nuesto ejemplo le hemos asignado 5 caracteres y no dejará poner más de un caracter. CANTIDAD MÁXIMA DE CARACTERES SOPORTADOS
-
-       minlenght: Cantidad mínima de caracteres soportados. Esto lo podríamos evitar cualquier usuario malintencionado cambiándolo en el inspector
-
-       autofocus: Seleccionar automáticamente el input elegido, y cuando entre a la página WEB el usuario pueda escribir automáticamente. Está bien para mejorar la experiencia de usuarios que siempre el autofocus sea el primer elemento de nuestro formulario. Es más facil para que el usuario pueda tabular entre cajoncitos.
+       <input type="text" autofocus name="usuario" value="maria" required>
+       - type: El type es el tipo de input
+            1.Inputs básicos (HTML 4.0): submit, reset, text, password, file, image y hidden. HTML4 es una versión antigua de HTML donde 
+            2.tenemos solo estos inputs.
+            3. Inputs (HTML5): button, number, tel, url, email, date, time, color range
+            4. Inputs (HTML 5.1): month, week, datetime.local (fecha con hora) 
        
-       <button>: Habilitaron la etiqueta button porque en el <input> no podemos poner nada dentro, es una etiqueta que se cierra en sí misma. El <button> soporta HTML dentro y el <input> solo me permite escribir lo que pueda escribir dentro de "value" no se puede poner un <h1> ni nada. El input es solo texto así que por fuerza hay que ponerle un type="submit" con el <button> no es necesario ya que por defecto está en submit, se le puede poner pero no es necesario.
+       - name: Es ponerle un identificador identificador único de la "variable" (Al input)
+       
+       - value: Es el valor inicial. Lo que aparece desde el principio Este texto se puede seleccionar NO SE BORRA AUTOÁTICAMENTE CUANDO ESCRIBIMOS EN EL HUECO. Y nos aparece en el resultado final
+       
+       - required: ES PARA HACER UN CAMPO OBLIGATORIO. Es decir el usuario no podrá enviar la información hasta que no lo rellene. En verdad cuando se escribe este atributo es como poner required=true pero no es necesario ponerlo en verdadero para que funcione. 
+       
+       - placeholder: Es un texto que quiero mostrar en el input pero que no es el valor Ej:(Ingrese su nombre...) Cuando le damos a escribir SE BORRA. No confundir con el "value" no lo podemos seleccionar. Es como una especie de aviso. MENSAJE AL USUARIO.
+
+       - size: Modifica el tamaño de la caja, que por defecto es 20. Esto es como un estilo pero en lenguaje HTML y es preferible NO USARLO porque todo el estilo lo haremos a través del CSS.
+
+       - maxlength: Especificará cuantos caracteres puede tener lo que escribamos. En nuesto ejemplo le hemos asignado 5 caracteres y no dejará poner más de un caracter. CANTIDAD MÁXIMA DE CARACTERES SOPORTADOS
+
+       - minlenght: Cantidad MÍNIMA de caracteres soportados. Esto lo podríamos evitar cualquier usuario malintencionado cambiándolo en el inspector.
+
+       - autofocus: Seleccionar automáticamente el input elegido, y cuando entre a la página WEB el usuario pueda escribir automáticamente. Está bien para mejorar la experiencia de usuarios que siempre el autofocus sea el primer elemento de nuestro formulario. Es más facil para que el usuario pueda tabular entre cajoncitos.
+       
+       - <button>: Habilitaron la etiqueta button porque en el <input> no podemos poner nada dentro, es una etiqueta que se cierra en sí misma. El <button> soporta HTML dentro y el <input> solo me permite escribir lo que pueda escribir dentro de "value" no se puede poner un <h1> ni nada. El input es solo texto así que por fuerza hay que ponerle un type="submit" con el <button> no es necesario ya que por defecto está en submit, se le puede poner pero no es necesario.
        "style: vertical.align:middle; (Dentro de la imagen) nos permitirá combinar imagen y texto en la misma línea"
 
-       disabled: Deshabilita el elemento. DESACTIVA EL INPUT.
+       - disabled: Deshabilita el elemento. DESACTIVA EL INPUT.
 
-       checked: Para que las opciones aparezcan directamente marcadas. En el caso de que seleccionemos dos no apareceran porque el type radio no dejaría marcar 2 diferentes
+       - checked: Para que las opciones aparezcan directamente marcadas. En el caso de que seleccionemos dos no apareceran porque el type radio no dejaría marcar 2 diferentes
 
-       min/max/step: cuando utilizamos el type="number". Para establecer un mínimo y un máximo numérico. El step se utiliza pará avanzar en números una cantidad específica, en este caso del ejemplo hemos puesto 5, así que los números ascenderán o descenderán de 5 en 5.
+       - min/max/step: cuando utilizamos el type="number". Para establecer un mínimo y un máximo numérico. El step se utiliza pará avanzar en números una cantidad específica, en este caso del ejemplo hemos puesto 5, así que los números ascenderán o descenderán de 5 en 5.
     
 
        Atributos TYPE:
