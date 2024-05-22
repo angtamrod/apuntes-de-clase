@@ -23,6 +23,8 @@
 
     <script>
 
+        
+
         //1. Declaramos Variables
         const miBotonSuma = document.getElementById("btnSuma"); //Así declaramos que cuando nos referimos al botón que suma, nos referimos al botón con el ID: #btSuma. Es constante que ese botón le daremos es ID
         const miBotonResta = document.getElementById("btnResta"); //Es constante que ese botón le daremos es ID
@@ -31,36 +33,49 @@
         const divResultado = document.getElementById("resultado"); //Es constante que ese div le daremos es ID
 
         let number=0; //El número que dará resultante va variando así que le daremos una variable "let"
+        ImprimirEnPantalla( "Haz click en los botones" );
 
         //Hacer una calculadora que multiplique por 5
         /*num= number * 5;
         //Hacer una calculadora que divida por 2
         num= number / 2;*/
         
-        //2. Manipulamos el DOM
+        //2. Manipulamos el DOM al hacer click en los botones
         miBotonSuma.addEventListener("click", () => {
             number = number +1; //Incrementando el numero en 1
-            divResultado.innerText= number;
+            //divResultado.innerText= number;
             /*miBoton.innerText= "Nuevoo Textoo!";*/
+            ImprimirEnPantalla(number);
         });
 
         miBotonResta.addEventListener("click", () => {
             number = number -1; //Incrementando el numero en 1
-            divResultado.innerText= number;
+           //divResultado.innerText= number;
             /*miBoton.innerText= "Nuevoo Textoo!";*/
+            ImprimirEnPantalla(number);
         });
 
         miBotonMultiplica.addEventListener("click", () => {
             number = number *5; //Incrementando el numero en 1
-            divResultado.innerText= number;
+            //divResultado.innerText= number;
             /*miBoton.innerText= "Nuevoo Textoo!";*/
+            ImprimirEnPantalla(number);
         });
 
         miBotonDivide.addEventListener("click", () => {
             number = number /2; //Incrementando el numero en 1
-            divResultado.innerText= number;
+            //divResultado.innerText= number;
             /*miBoton.innerText= "Nuevoo Textoo!";*/
+            ImprimirEnPantalla(number);
         });
+
+        //----------------------------------------------------
+        // Cambios dia26
+        //----------------------------------------------------
+
+        function ImprimirEnPantalla( number ) {
+            div.divResultado.innerText= number;
+        }
 
 
         /*let numero=10;

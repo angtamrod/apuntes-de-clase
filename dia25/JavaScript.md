@@ -119,8 +119,9 @@ lineas*/
 - Números: Enteros, decimales, positivos, negativos etc...
 - Cadenas de texto (Strings): Textos, palabras, frases, 1 letra. Entre comillas simples '', dobles "", o backticks ``
 - Booleanos: Verdadero o Falso
-- Listas de cosas (Arrays): Se escribe con corchetes ([]) y separadas con comas. Cuando hacemos listas estamos apuntando hacia un lugar donde están esas cajas (Variables) siempre que haya una lista tienen que ser constante (const)
-- Objetos (Object): Colección de propiedades (Características) y métodos (Funcionalidades). Se escriben con llaves ({})
+- Referenciales:
+  > Listas de cosas (Arrays): Se escribe con corchetes ([]) y separadas con comas. Cuando hacemos listas estamos apuntando hacia un lugar donde están esas cajas (Variables) siempre que haya una lista tienen que ser constante (const)
+  > Objetos (Object): Colección de propiedades (Características) y métodos (Funcionalidades). Se escriben con llaves ({})
   
 ```js
 //PRIMITIVOS
@@ -137,9 +138,10 @@ let miNumero = Number("1234"); //esto es igual a 1234
 
 let estaPrendido= false;
 let isPrimary = true;
-let onAvtive = false;
+let onActive = false;
 
 //REFERENCIALES
+//Podemos modificar los datos de Arrays y Objetos por más que sean constantes.
 
 // arrays
 const alumnosDeDW = ["Nerea", "David", "Jenny",...];

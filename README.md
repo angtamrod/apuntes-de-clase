@@ -406,3 +406,7 @@ Es mejor tener el HTML por un lado y el JS por otro
 Siempre que va una linea de JS va punto y coma (;) y dentro de los objetos  va (,)
 Los formularios no deben funcionar en el proyecto final
 No dejan usar onClick para el proyecto final
+
+Métodos para seleccionar elementos en JS 
+getElementById para seleccionar elementos a través de ID 
+queryselector para seleccionar elementos a través de la lista de selectores
