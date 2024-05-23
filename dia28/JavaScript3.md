@@ -340,8 +340,8 @@ let esMenor = { num1 < num2 }; //false
 
 Podemos verificar que múltiples operaciones sean verdaderas usando esos operadores:
 
-&& - se tienen que cumplir todas las comparaciones. Se tienen que cumplir los 2.
-|| - se tiene que cumplir al menos una de las comparaciones. Se tiene que realizar al menos uno de los valores.
+&& - se tienen que cumplir todas las comparaciones.
+|| - se tiene que cumplir al menos una de las comparaciones.
 
 ```javascript
 if(edad > 21 && acepteTyC == true){
@@ -368,7 +368,7 @@ if(!true){
 
 ## Funciones
 
-Una función es un bloque de código o algoritmo que realiza una operación específica. Puede recibir valores de entrada (`Parámetros`) y devolver un único resultado. Siempre que devuelva devolverá un ÚNICO RESULTADO, NO puede devolver 2 cosas. Los valores que se pasan a la función cuando se invoca se les llama `argumentos`.
+Una función es un bloque de código o algoritmo que realiza una operación específica. Puede recibir valores de entrada (`Parámetros`) y devolver un único resultado. Siempre que devuelva devolverá un ÚNICO RESULTADO, NO puede devolver 2 cosas. Los valores que se pasan a la función cuando se invoca se les llama `argumentos`. Tambien tenemos la opcicón de inicializar un parámetro con un valor. Recordemos que siempre tienen que ir AL FINAL DE LA LISTA
 
 ```javascript
 
@@ -406,8 +406,12 @@ Saludar ("María", 31);
 //En los paréntesis de la función arriba definida las variables no se asignan por el nombre si no por el orden que siguen. 
 //La función se comporta como un camarero que trae algo a la mesa, lo que ponemos entre paréntesis es la cosa que tiene que traer (Como un plato / copa / una servilleta). La acción de traer algo a la mesa sería lo que pondríamos dentro de la función, es decir lo que ponemos dentro de la función es la acción que va a realizar ese camarero que es la función en sí.
 
+```
 
-function Saludar ( nombre, edad ) { 
+Tambien tenemos la opcicón de inicializar un parámetro con un valor. Recordemos que siempre tienen que ir AL FINAL DE LA LISTA
+
+```js
+function Saludar ( nombre, edad, genero = "no indicado") { 
   
   //1. Creo una variable
   let respuesta;
@@ -420,14 +424,12 @@ function Saludar ( nombre, edad ) {
 
 let mensaje;
 //Llamar a la función múltiples veces con distintos ARGUMENTOS
-mensaje = Saludar("Juancito", 18);// "Juancito" y 18
+mensaje = Saludar("Juancito", 18, "masculino");// "Juancito" y 18
 console.log(mensaje);
 alert(mensaje);
 
 mensaje = Saludar("Juan", edad);
-mensaje = Saludar("María", "Treinta y uno");//"María" y "Treinta y uno"
-
-
+mensaje = Saludar("María", "Treinta y uno", "femenino");//"María" y "Treinta y uno"
 
 ```
 
@@ -436,6 +438,7 @@ mensaje = Saludar("María", "Treinta y uno");//"María" y "Treinta y uno"
 Son estructuras de control que nos premiten tomar decisiones. Si se cumple la condición, se ejecuta un bloque de código y si no se cumple, se ejecuta otro bloque de código.
 
 - El uso de `else` es opcional
+- Se pueden anidar condicionales, es decir puede haber condicionales dentro de condicionales.
 
 ```js
 

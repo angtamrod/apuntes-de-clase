@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>EJERCICIOS JavaScript</h3>
+    <script>
+
+        /*Ejercicios de prácticas:
+        1. Crear una función que reciba un número y devuelva si es   par o impar.
+        2. Crear una función que reciba un número y devuelva si es `positivo`, `negativo`, o `cero`
+        3. Crear una función que me indica si es mayor o menor de edad.
+        4. Crear una función a la que si le indico el día de la semana, me devuelve si es laboral o no.
+        5. Crear una función donde sus parámetros sean Jugador 1 y Jugador2, y devuelva si el Jugador 1 le gana a Jugador 2 es un juego de `piedra`, `papel` o `tijera`
+        6. Modificar la calculadora del día 25 para que podamos sumar restar multiplicar o dividir 2 valores utilizando funciones.
+        */
+
+        //--------------------------------------------------
+        //                  EJERCICIO 1
+        //--------------------------------------------------
+
+        
+        function ParImpar ( number ) {
+            let respuesta;
+
+            // todos los posibles errores se ponen arriba y lo hemos puesto por si ponemos un valor diferente al que hemos puesto en un principio nos dé error
+            if(typeof num%2 == NaN){
+                return "Valor invalido";
+            }
+
+            if(number % 2 === 0){
+                respuesta = "El número"+num+"es PAR";
+            }else(number % 2 !== 0){
+                respuesta = "El número"+num+"es IMPAR";
+            }
+            return respuesta;
+        }
+
+        let msg;
+
+        msg=ParImpar(4); 
+        console.log(msg);//Me cargará el mensaje: "El número 4 es par"
+
+        msg=ParImpar(7); 
+        console.log(msg);//Me cargará el mensaje: "El número 7 es impar"
+
+        msg=ParImpar(0);
+        console.log(msg);//Me cargará el mensaje: "El número 0 es par"
+
+        msg=ParImpar("patata");
+        console.log(msg);//Me cargará el mensaje: "El número "patata" es impar" Porque no cargará "patata" como un número y al cargar el módulo (%) de 2, dará nulo y eso no es igual igual igual a 0 así que como pusimos el else conmo impar asociará al else
+
+        console.log(typeof ("tasd"%2));
+
+
+        //--------------------------------------------------
+        //                  EJERCICIO 2
+        //--------------------------------------------------
+
+        function PosNegCero (number) {
+            let respuesta;
+            let enconteResultado = false; // Nos sirve como comprobador para saber si un resultado es correcto o no encontré o no un resultado
+
+            if (number === 0) {
+                enconteResultado = true;
+                respuesta="El número "+number+" es 0";
+            }
+
+            if (number > 0) {
+                enconteResultado = true;
+                respuesta="El número "+number+" es positivo";
+            }
+            if (number < 0) { 
+                enconteResultado = true;
+                respuesta="El número "+number+" es negativo";
+            }
+
+            if(enconteResultado){
+            return respuesta;
+            } else {
+                return "Tuvimos un error con tus datos";
+            }
+
+        };
+
+        //--------------------------------------------------
+        //                  EJERCICIO 3
+        //--------------------------------------------------
+
+       
+
+
+        function MayorDeEdad(edad) {
+            let respuesta; 
+            let edad;
+            
+            if(edad < 18){
+                respuesta = "Es menor de edad";
+  //prohibir el acceso a la página
+            }
+            if (edad > 18){
+                respuesta = "Es menor de edad";
+            }
+            return respuesta;
+
+        }
+
+        MayorDeEdad (24);
+
+
+        //--------------------------------------------------
+        //                  EJERCICIO 4
+        //--------------------------------------------------
+
+        function NoLaboral(txtDia){
+            let respuesta="No seee";
+
+            if(txtDia == "Sabado" || txtDia == "Domingo"){
+                respuesta="Es festivo";
+            }//else {
+            //    respuesta= "Es laboral"
+            //} ESTO ERA OTRA POSIBLE FORMA DE HACERLO
+
+            if(txtDia == "Lunes" || txtDia == "Martes" || txtDia == "Miercoles" || txtDia == "Jueves" || txtDia == "Viernes"){
+                respuesta="Es laboral";
+            }
+
+            return respuesta;
+        }
+
+
+        //--------------------------------------------------
+        //                  EJERCICIO 5
+        //--------------------------------------------------
+
+
+
+        //--------------------------------------------------
+        //                  EJERCICIO 6
+        //--------------------------------------------------
+
+
+
+
+    </script>
+</body>
+</html>

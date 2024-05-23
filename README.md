@@ -410,3 +410,26 @@ No dejan usar onClick para el proyecto final
 Métodos para seleccionar elementos en JS 
 getElementById para seleccionar elementos a través de ID 
 queryselector para seleccionar elementos a través de la lista de selectores
+
+
+/**
+ * 
+**/
+ASÍ ES COMO SE COMENTAN LAS FUNCIONES EN EL PROYECTO FINAL
+
+
+FUNCIÓN para hacer comprobación login de usuario
+
+```js
+  function LoginUsuario(user, clave, clave2){
+    if( user tiene mas de 4 letras){ return }
+    if( clave es segura ){ return }
+    if( clave == clave2 ){ return }
+
+    Hacer Login de Usuario:
+  }
+```
+
+
+Para este tipo de ejercicios es mejor no usar else
+ porque sobreescriben otros "if"
