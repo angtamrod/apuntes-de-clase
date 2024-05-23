@@ -34,7 +34,7 @@
 
             if(number % 2 === 0){
                 respuesta = "El número"+num+"es PAR";
-            }else(number % 2 !== 0){
+            }else{
                 respuesta = "El número"+num+"es IMPAR";
             }
             return respuesta;
@@ -61,22 +61,22 @@
         //                  EJERCICIO 2
         //--------------------------------------------------
 
-        function PosNegCero (number) {
+        function PosNegCero (num) {
             let respuesta;
             let enconteResultado = false; // Nos sirve como comprobador para saber si un resultado es correcto o no encontré o no un resultado
 
-            if (number === 0) {
+            if (num === 0) {
                 enconteResultado = true;
-                respuesta="El número "+number+" es 0";
+                respuesta="El número "+num+"es 0";
             }
 
-            if (number > 0) {
+            if (num > 0) {
                 enconteResultado = true;
-                respuesta="El número "+number+" es positivo";
+                respuesta="El número "+num+"es positivo";
             }
-            if (number < 0) { 
+            if (num < 0) { 
                 enconteResultado = true;
-                respuesta="El número "+number+" es negativo";
+                respuesta="El número"+num+"es negativo";
             }
 
             if(enconteResultado){
@@ -96,7 +96,7 @@
 
         function MayorDeEdad(edad) {
             let respuesta; 
-            let edad;
+        
             
             if(edad < 18){
                 respuesta = "Es menor de edad";

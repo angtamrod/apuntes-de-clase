@@ -196,15 +196,14 @@ consle.log();
 <!---------------------------------------------------------------------------
                             CONTINUACIÓN DÍA 26
 ---------------------------------------------------------------------------->
-## Más tipos de datos 
+## Más tipos de datos
 
 - Undefined: Valor que se le asigna a una variable que no tiene valor (se declara pero no se le asigna un valor)
 - Null: Valor que se le asigna a una variable para identificar que no tiene valor intencionalmente.
 - NaN (Not a Number): Valor que obtenemos cuando se esperaba un número pero no lo es.
 - Empty (Vacío): Un string con valor vacío  '' o ""
-- Funciones 
+- Funciones
 - Fechas
-
 
 ```javascript
 // Otros tipos de datos
@@ -365,7 +364,6 @@ if(!true){
 }
 ```
 
-
 ## Funciones
 
 Una función es un bloque de código o algoritmo que realiza una operación específica. Puede recibir valores de entrada (`Parámetros`) y devolver un único resultado. Siempre que devuelva devolverá un ÚNICO RESULTADO, NO puede devolver 2 cosas. Los valores que se pasan a la función cuando se invoca se les llama `argumentos`. Tambien tenemos la opcicón de inicializar un parámetro con un valor. Recordemos que siempre tienen que ir AL FINAL DE LA LISTA
@@ -391,6 +389,9 @@ Saludar ("Juan");
 Saludar ("Tomás");
 Saludar ("María");
 
+```
+
+```js
 
 function Saludar ( nombre, edad ) { //Los paréntesis del principio sirven para recibir valores de entrada
   //Entre las llaves escribimos el código que realizará mi función entre ({})
@@ -467,10 +468,6 @@ if(edad >= 18 ){
   console.log("Es Menor de edad");
 }
 
-```
-
-```js
-
 if(edad< 21){
   //prohibir el acceso a la página
 }
@@ -496,14 +493,15 @@ if(edad< 90){
 
 ## Uso de Bucles
 
-Los bucles permiten repetir un código varias veces. En JS tenemos 3 tipos de buvles:
+Los bucles permiten repetir un código varias veces. En JS tenemos 3 tipos de bucles:
 
 - `for`: Se utiliza cuando sabemos cuantas veces queremos que se repita algo.
 - `while`:
 - `do-white`:
 
 ```js
-// for(inicializador; condicion; incremento)
+//EJEMPLO DE FOR
+// for(inicializador esto define la variable; condicion la condición para que se siga ejecutando; operación a realizar al terminar el código (En este caso incremento))
  for(let contador=0; contador < 10; contador++){
   //me voy a repetir muchas veces!
   console.log("HOLA ALUMNOS!!!"+ contador);
