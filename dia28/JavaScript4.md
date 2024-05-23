@@ -491,13 +491,16 @@ if(edad< 90){
 5. Crear una función donde sus parámetros sean Jugador 1 y Jugador2, y devuelva si el Jugador 1 le gana a Jugador 2 es un juego de `piedra`, `papel` o `tijera`
 6. Modificar la calculadora del día 25 para que podamos sumar restar multiplicar o dividir 2 valores utilizando funciones.
 
+<!--
+---------- CONTINUACIÓN DIA 28
+-->
 ## Uso de Bucles
 
 Los bucles permiten repetir un código varias veces. En JS tenemos 3 tipos de bucles:
 
 - `for`: Se utiliza cuando sabemos cuantas veces queremos que se repita algo.
-- `while`:
-- `do-white`:
+- `while`: Se utiliza cuando no sabemos cuantas veces se va a repetir el bloque de código. (SE USA MUY POCO)
+- `do-white`: Es igual a while, pero SE EJECUTA AL MENOS UNA VEZ se cumpla o no la condición la primera vez (SE USA MUY POCO)
 
 ```js
 //EJEMPLO DE FOR
@@ -506,5 +509,75 @@ Los bucles permiten repetir un código varias veces. En JS tenemos 3 tipos de bu
   //me voy a repetir muchas veces!
   console.log("HOLA ALUMNOS!!!"+ contador);
  }
+```
 
+```js
+//EJEMPLO DE BUCLE WHILE
+//Aquí la variable va fuera del while, dentro de los parámetros del while se pone la condición para que se ejecute y la operación se pone al final del todo dentro de las llaves de while
+let i=0;
+while(i<10){
+  console.log("Hola Alumnos");
+  i++;
+}
+
+let salir=false;
+//while(salir==false) lo de abajo es lo mismo 
+while(!salir){
+  console.log("me quedo jugando...");
+  salir=true;
+}
+```
+
+```js
+//EJEMPLO DE DO-WHITE
+let i = 25;
+do{
+  console.log("Hola Alumnos");
+} while(i<5);
+```
+
+## Math
+
+El objeto `math` nos propociona propiedades y métodos para realizar operaciones. Los más comunes son:
+
+- Math.random(): Devuelve un número pseudo-aleatorio entre 0 y 1.
+- Math.round(): Devuelve el valor de un número redondeado al entero más cercano.
+- Math.ceil(): Redondea hacia arriba.
+- Math.floor(): Redondea para abajo.
+- Math.abs(): Devuelve el valor absoluto de un número.
+
+```js
+let numero=3.1416;
+
+let numeroRedondeadoEntero = Math.round(numero); // 3
+let numeroRedondeadoParaArriba = Math.ceil(numero); // 4
+//De esta forma convertimos nuestro número de 4 dígitos en decimales en 2 dígitos
+let numeroDeDosDigitos = Math.round(numero*100)/100;// 3.14
+
+//EJEMPLO DE UN NÚMERO AL AZAR DEL 1 AL DIEZ
+let numeroAzar1Al10 = Math.round(Math.random()*10);
+```
+
+## Interpolación de variables (Template Strings)
+
+Es una forma de concatenar strings y variables de forma legible. Se utiliza "acento grave"(backtick) para delimitar el string y ${} para insertar la variable.
+
+
+Entre los beneficios tenemos:
+
+- Lectura mucho más sencilla
+- Uso de variables en nuestros strings.
+- Posibilidad de escribir múltiples líneas de texto.
+- Realizar operaciones dentro de llaves {} string.
+
+
+```js
+
+//método tradicional
+let nombre = "Juan";
+let contenido = `<div class='caja'>"+
+                  "<h1>Hola a todos!, mi nombre es ${nombre} </h1>
+                  </div>`;
+
+let mensaje = `Hola, me llamo ${nombre} y voy a cumplir ${edad+1} años!`
 ```

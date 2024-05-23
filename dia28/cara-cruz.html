@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara o cruz</title>
+</head>
+<body>
+    <h1>CaroSello!!</h1>
+
+    <button onclick="tirarMoneda()">Tirar Moneda</button>
+
+    <p>Cantidad de Caras: <span id="cantCara">0</span></p>
+    <p>Cantidad de Cruz: <span id="cantCruz">0</span></p>
+    <p>Porcentaje de Caras: <span id="porcentajeCaras">0%</span></p>
+    <script>
+            let cantCaras=0;
+            let cantCruz=0;
+            let porcentaje=0;
+            let txtPorcentaje="";
+
+            const spanCara = document.getElementById("cantCara");
+            //console.log("encontré el span", txtCara) ESTO SIRVE PARA VER SI LO ENCUENTRA CON EL ById
+            const spanCruz = document.getElementById("cantCruz");
+            const spanPorcentaje = document.getElementById("porcentajeCara");
+
+            function tirarMoneda () {
+                //operación para tirar la moneda
+                //1. Tirar la moneda
+                
+                
+                if (Math.random() < 0.5){
+                    // cara
+                    cantCaras++;
+                    
+                }else{
+                    //cruz
+                    cantCruz++;
+                    
+                }
+
+                //2. Calcular porcentajes de caras
+                // porcentaje = Caras / (Caras + Cruces)
+
+
+                imprimirResultados();
+            }
+
+            function imprimirResultados(){
+                //mostrar los resultados en pantalla
+                //txtPorcentaje= porcentaje+"%"; Es lo mismo que abajo pero lo de abajo es con las interpolación de variables
+                txtPorcentaje= `${porcentaje} %`;
+                cantCara= `${cantCaras}`;
+                cantCruz= `${cantCruz}`;
+
+                spanCara.innerHTML = cantCaras;
+                spanCruz.innerHTML = cantCruz;
+                spanPorcentaje.innerHTML = textPorcentaje;
+                
+
+            }
+    </script>
+</body>
+</html>
