@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de objeto</title>
+
+    <style>
+        .flexContainer {
+            display: flex;
+        }
+        .miCaja{
+            width: 100px;
+            height: 100px;
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejemplo de objeto</h1>
+
+    <div class="flexContainer">
+        <div class="miCaja" id="miCaja1">Soy un Div</div>
+        <div class="miCaja"id="miCaja2">Soy un Div</div>
+    </div>
+
+    <!--<script>
+        //variable GLOBAL (en todo el código)
+        let mombre= "Tom";
+
+        function MiNombre(){
+            //variable LOCAL dentro solo en este caso de la función (funcionan en (funciones) y (objetos))
+            let apellido="SG";
+            if(miNombre=="Tom"){
+                //variable de BLOQUE en este caso dentro del "if" (pero funcionan en (for) (while) (if) (do-while))
+                let saludar=true;
+                console.log(nombre);// TOM
+                console.log(apellido); // SG
+                console.log(saludar);// true
+            }
+            console.log(nombre);//TOM
+                console.log(apellido);//SG
+                console.log(saludar);//undefined
+            
+        }
+        console.log(nombre);//TOM
+            console.log(apellido);//undefined
+            console.log(saludar);//undefined
+            
+    </script>-->
+
+    <script>
+        // Parte 1 generar variables
+        const myDiv1 = document.getElementById("miCaja1");
+        const myDiv2 = document.getElementById("miCaja2");
+        const container = document.querySelector(".flexContainer");
+
+        const divChanger = {//El this se refiere a dónde está dentro del objeto (divChanger)
+            //este es el objeto que voy a cambiar
+            objetoACambiar: null,
+
+            cambiarAncho: function(ancho) {//función para cambiar el ancho del div
+                this.objetoACambiar.style.width = ancho;//200px 
+            },
+            cambiarAlto: function(alto) {//función para cambiar el alto del div
+                this.objetoACambiar.style.height = alto;//200px
+            },
+            cambiarAnchoYAlto: function(medida) {//función para cambiar en este caso el ancho y el alto del div
+                this.objetoACambiar.style.width = medida;//200px
+                this.objetoACambiar.style.height = medida;//200px
+            },
+            cambiarFondo: function(url) {//función para cambiar en este caso el ancho y el alto del div
+                this.objetoACambiar.style.backgroundImage = `url(${url})`;
+                this.objetoACambiar.style.backgroundSize = "cover";
+                this.objetoACambiar.style.backgroundPosition = "center";
+                
+            },
+
+        }
+
+        //Parte 2 crear funciones
+
+        //Parte 3 ejecutar código
+
+
+        // Parte 3 ejecutar código
+        // Cambiando las propiedades (en este caso del ancho) de Caja1
+        divChanger.objetoACambiar = myDiv1;
+        divChanger.cambiarAncho("200px");
+
+        // Cambiando las propiedades de Caja2
+        divChanger.objetoACambiar = myDiv2;
+        divChanger.cambiarAnchoYAlto("300px");
+        divChanger.cambiarFondo("");
+
+        myDiv1.style.border = "1px solid black";//Estamos modificando el estilo de la caja 1 en concreto el borde
+        myDiv1.innerText = "Contenido caja 1 modificado";//Estamos modificando el texto de caja 1
+    </script>
+</body>
+</html>

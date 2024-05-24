@@ -433,3 +433,5 @@ FUNCIÓN para hacer comprobación login de usuario
 
 Para este tipo de ejercicios es mejor no usar else
  porque sobreescriben otros "if"
+
+ en JS NO SE PUEDE USAR (-) guión medio

@@ -577,3 +577,71 @@ let contenido = `<div class='caja'>"+
 
 let mensaje = `Hola, me llamo ${nombre} y voy a cumplir ${edad+1} años!`
 ```
+
+
+<!------------------------------------------------------------------------------------------------------------
+-------------------------------------CONTINUACIÓN DIA 29------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------->
+
+
+
+# Objeto
+
+Una colección de propiedades, y todas tienen sus respectivos nombres (claves) y valores.
+Sus valores pueden ser de todo tipo:
+
+- Datos
+- Variables
+- Funciones
+- Otros objetos...
+
+En el caso de las funciones a estas propiedades las llamamos métodos
+
+```js
+const miObjeto = {
+  propiedad : "valor1",
+  propiedad2 : 2, 
+  propiedad3 : false,
+  metodoSumar : function (num1, num2) {
+    return num1+num2;
+  },
+  metodo2 : function () {},
+  //Las propiedades y los valores van separados de una , en vez de un punto y coma ;
+  ...
+}
+```
+
+Podemos acceder a las propiedades del objeto desde sus métodos usando la palabra clave `this`. EL uso de `this` hace referencia a ÉL mismo para acceder a sus valores.
+
+```js
+const coche = { //Coche en este ejemplo es un objetos y contiene sus propiedades y valores las propiedades son el nombre que le damos a las cosas
+  marca: "Tesla", // propiedad: Marca valor: "Tesla"
+  modelo: "ModelX",
+  kmsRecorridos: 7777,
+  color: "Negro",
+
+  //métodos
+  metodoEncender: function (){//propiedad: metodoEncender valor: la función que contiene
+    //usamos "this" para acceder a los kilómetros del coche
+    const kms = this.kmsRecorridos;///Esto nos dará 7777
+    console.log(`Arrancando el coche con ${kms} kms`)
+  },
+  buscarme: function (positionGPS){
+    console.log(`Manejar automáticamente hasta la posición GPS ${positionGPS}`)
+  }
+}
+//leer kms recorridos 
+console.log(coche.kmsRecorridos);
+const kilometros = coche.kmsRecorridos; //7777
+//Escribir nuevos kms recorridos: 
+coche.kmsRecorridos = kilometros + 5; //kmsRecorridos = 7782
+//Pintar el tesla de rojo
+coche.color = "Rojo";
+
+//Para ejecutar métodos hay que ponerle paréntesis al final
+//Para encender el coche
+coche.metodoEncender();
+
+//Para que el coche me venga a buscar con la función que hemos puesto arriba
+coche.buscarme(positionGPS);
+```
