@@ -1,0 +1,76 @@
+
+body{
+    font-family: "Poetsen One", sans-serif;
+    font-weight: lighter;
+}
+
+button{
+    font-family: "Poetsen One", sans-serif;
+}
+.txtResultado{
+    border: 1px dashed black;
+}
+.u-bgYellow{
+    background-color: #ECE96F;
+}
+.u-bgPurple {
+    background-color: #B78DDF;
+}
+.u-bgGreen {
+    background-color: #95CD66;
+}
+
+.u-bgOrange {
+    background-color: coral;
+}
+
+.u-bgBlue {
+    background-color: cornflowerblue;
+}
+
+.txtEstadisticas{
+max-width: 100%;
+height: 200px;
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+gap: 10px;
+text-align: center;
+}
+
+.stats-item{
+height: 0%;
+max-width: 80%;
+border-radius: 5px;
+padding: 1%;
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+transition: height 0.5s;
+
+}
+.progressBar {
+    max-width: 100vw;
+    background-color: white;
+    display: flex;
+    text-align: center;
+    margin-top: 10px;
+   
+
+}
+
+.progressBar-item {
+    width: 0%;
+    max-width: 100%;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+
+    flex-grow: 1; 
+    justify-content: center;
+    font-size: small;
+    
+    transition: width 0.5s;
+}

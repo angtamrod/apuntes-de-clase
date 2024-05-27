@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕹️Piedra-Papel-Tijeras</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+25+Charted&family=Jost:ital,wght@0,100..900;1,100..900&family=Poetsen+One&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style-correccion.css">
+
+</head>
+<body>
+    <h1>Piedra, Papel y Tijera</h1>
+
+    <button onClick="jugar(`piedra`)">Piedra👊</button>
+    <button onClick="jugar(`papel`)">Papel✋</button>
+    <button onClick="jugar(`tijeras`)">Tijeras✌️</button>
+
+    <div class="txtResultado"></div>
+
+    <hr>
+    <p>Ganadas: <span id="ganadas">0</span></p>
+    <p>Perdidas: <span id="perdidas">0</span></p>
+    <p>Empatadas: <span id="empatadas">0</span></p>
+    <hr>
+
+    <b>Stats</b>
+    <div class="txtEstadisticas">
+        <div class="stats-item u-bgGreen">Ganadas</div>
+        <div class="stats-item u-bgOrange">Perdidas</div>
+        <div class="stats-item u-bgPurple">Empatadas</div>
+    </div>
+    <hr>
+
+    <b>Gráfica</b>
+    <div class="progressBar">
+        <!--Cambios de corrección-->
+        <div class="progressBar-item u-bgBlue">Player 1</div>
+        <div class="progressBar-item u-bgYellow">IA</div>
+        
+        
+    </div>
+
+    <script src="./js/script-correccion.js"></script>
+</body>
+</html>

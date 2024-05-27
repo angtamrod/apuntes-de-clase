@@ -163,15 +163,21 @@
             }//Esto nos permite tener un solo resultado
 
             return resultado;
-   
+
+        }
+        
+        /* ES MÁS FÁCIL USAR UNA OPERACIÓN TERNARIA 
+            
+            (TEORÍA)
             //OPERACIÓN TERNARIA: Otra forma más simple de comprobación en vez del if de arriba
             // pregunta ? se cumple: no se cumple;
-            //resultado = (jugador2 == "piedra") ? "gana Jugador 2" : "gana Jugador 1";
-            /*Normalmente se escribe de esta manera
-            resultado = (jugador2 == "piedra") ? "gana Jugador 2" 
-                                               : "gana Jugador 1";
-            */
+                 resultado = (jugador2 == "piedra") ? "gana Jugador 2" : "gana Jugador 1";
+                Normalmente se escribe de esta manera
+                resultado = (jugador2 == "piedra") ? "gana Jugador 2" 
+                                                   : "gana Jugador 1";
             
+            (APLICACIÓN EN ESTE EJERCICIO)
+            Esto sería lo mismo que tenemos arriba pero con menos código
             function PiedraPapelTijeras(jugador1, jugador2){
                 let resultado="Datos Invalidos";
 
@@ -190,10 +196,9 @@
                 resultado="Datos Invalidos";
             }//Esto nos permite tener un solo resultado
 
-            return resultado;
-
-            
+            return resultado;   
         }
+        */
 
         PiedraPapelTijeras("piedra", "papel");
         PiedraPapelTijeras("tijera", "tijera");

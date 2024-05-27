@@ -4,9 +4,11 @@
 .u-bgRed{
     background-color: red;
 }
+
 .u-bgBlue {
     background-color: blue;
 }
+
 .progressBar {
     width: 100%;
     background-color: gray;
@@ -17,6 +19,5 @@
 .progressBar-item {
     width: 0%;
     color: white;
-    display: flex;
     transition: width 1s;
 }

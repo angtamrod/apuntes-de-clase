@@ -10,9 +10,13 @@ const txtEmpatadas = document.getElementById("empatadas");
 
 // Gráfica de barra
 const progressBar  = document.querySelector(".progressBar");
-const divGanadas = document.querySelector(".progressBar>div:nth-child(1)");//En css el simbolo de mayor significa (dentro de)
-const divPerdidas = document.querySelector(".progressBar>div:nth-child(2)");
+const divGanadas = document.querySelector(".txtEstadisticas>div:nth-child(1)");//En css el simbolo de mayor significa (dentro de)
+const divPerdidas = document.querySelector(".txtEstadisticas>div:nth-child(2)");
+const divEmpatadas = document.querySelector(".txtEstadisticas>div:nth-child(3)");
 
+//ProgressBar
+const divJugador = document.querySelector(".progressBar>div:nth-child(1)");
+const divJugadorIA = document.querySelector(".progressBar>div:nth-child(2)");
 
 const objPuntaje= {
     // Puntaje del juego 
@@ -111,13 +115,12 @@ function mostrarEstadisticas(){
 
     //graficar barra
     graficarBarra();
-    
+    //Prueba
+    graficarStats();
 }
 
-
-
-
-function graficarBarra() {
+//Prueba
+function graficarStats (){
     const total = objPuntaje.ganadas + objPuntaje.perdidas + objPuntaje.empatadas;
     //Aquí estamos declarando una variable para calcular el porcentaje de partidas ganadas, perdidas y empatadas
     let porcentajeGanadas = Math.round((objPuntaje.ganadas/total)*100);
@@ -128,12 +131,29 @@ function graficarBarra() {
     //Aquí estamos modificando el HTML para que en la progres-bar aparezca el porcentaje de ganadas, perdidas y empatadas
     divGanadas.innerHTML = `Ganadas <br> ${porcentajeGanadas}%`;
     divPerdidas.innerHTML = `Perdidas <br> ${porcentajePerdidas}%`;
-    
+    //cambio corrección
+    divEmpatadas.innerHTML = `Empatadas <br> ${porcentajeEmpatadas}%`;
 
     //Aquí estamos modificando el CSS para que la barra se ensanche según se modifique la cantidad de ganadas, perdidas y empatadas
-    divGanadas.style.width=porcentajeGanadas+"%";
-    divPerdidas.style.width=porcentajePerdidas+"%";
+    divGanadas.style.height=porcentajeGanadas+"%";
+    divPerdidas.style.height=porcentajePerdidas+"%";
+    //cambio corrección
+    divEmpatadas.style.height=porcentajeEmpatadas+"%";
+}
+
+
+
+function graficarBarra() {
+    const total = objPuntaje.ganadas + objPuntaje.perdidas + objPuntaje.empatadas;
     
+    let porcentajeJugador = Math.round((objPuntaje.ganadas/total)*100);
+    let porcentajeJugadorIA = Math.round((objPuntaje.perdidas/total)*100);
+
+    divJugador.innerHTML = `Player 1 <br> ${porcentajeJugador}%`;
+    divJugadorIA.innerHTML = `IA <br> ${porcentajeJugadorIA}%`;
+
+    divJugador.style.width=porcentajeJugador+"%";
+    divJugadorIA.style.width=porcentajeJugadorIA+"%";
 }
 
 
