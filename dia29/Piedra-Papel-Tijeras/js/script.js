@@ -149,6 +149,8 @@ function resetStats(){
     objPuntaje.stats.user_piedra = 0;
     objPuntaje.stats.user_papel = 0;
     objPuntaje.stats.user_tijera = 0;
+
+    mostrarEstadisticas()
     
 
 }

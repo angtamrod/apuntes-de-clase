@@ -150,7 +150,7 @@ function graficarBarra() {
     let porcentajeJugadorIA = Math.round((objPuntaje.perdidas/total)*100);
 
     divJugador.innerHTML = `Player 1 <br> ${porcentajeJugador}%`;
-    divJugadorIA.innerHTML = `IA <br> ${porcentajeJugadorIA}%`;
+    divJugadorIA.innerHTML = `JugadorIA <br> ${porcentajeJugadorIA}%`;
 
     divJugador.style.width=porcentajeJugador+"%";
     divJugadorIA.style.width=porcentajeJugadorIA+"%";
