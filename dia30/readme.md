@@ -32,3 +32,20 @@ divEstadísticas.addEventListener("click", () => {//Para simplificarlo más se p
     console.log("estoy haciendo algo cuando me hicieron click")
 })
 ```
+
+
+
+```js
+
+const Numeros =[5,3,25,12];
+const ListaActualizada = Numeros.map (function( numero ){
+    return numero;
+})
+
+const Numeros =[5,3,25,12];
+const ListaActualizada = Numeros.map (function( numero ){
+    return numero+1;
+})//El resultado sería [6,4,26,13]
+
+
+```

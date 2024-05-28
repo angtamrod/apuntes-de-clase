@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+</head>
+<body>
+    <div>
+        <h1>cafe</h1>
+        <button onclick="agregarAlCarrito(1, `cafe`)">Agregar 1 al carrito</button>
+        <button onclick="agregarAlCarrito(2, `cafe`)">Agregar 2 al carrito</button>
+        <button onclick="agregarAlCarrito(3, `cafe`)">Agregar 3 al carrito</button>
+    </div>
+    <div>
+        <h1>bocadillo</h1>
+        <button onclick="agregarAlCarrito(1, `bocadillo`)">Agregar 1 al carrito</button>
+        <button onclick="agregarAlCarrito(2, `bocadillo`)">Agregar 2 al carrito</button>
+        <button onclick="agregarAlCarrito(3, `bocadillo`)">Agregar 3 al carrito</button>
+    </div>
+    <div>
+        <h1>bebida</h1>
+        <button onclick="agregarAlCarrito(1, `bebida`)">Agregar 1 al carrito</button>
+        <button onclick="agregarAlCarrito(2, `bebida`)">Agregar 2 al carrito</button>
+        <button onclick="agregarAlCarrito(3, `bebida`)">Agregar 3 al carrito</button>
+    </div>
+    <div style="border-top: 1px solid black; margin:10px; padding:10px;">
+            
+    <!--<button onclick="verTotal()">Ver total de items</button>-->
+    <button onclick="borrarCarrito()">Vaciar carrito</button>
+    </div>
+
+    <div id="información">9999</div>
+
+    <script>
+        //
+        let cantidadTotal = 0;
+        let cantidadCafes = 0;
+        let cantidadBocadillos = 0;
+        let cantidadBebidas = 0;
+        const txtInfo= document.getElementById("información");
+
+        txtInfo.innerHTML="HOLAAAA";
+
+        function agregarAlCarrito (Number, item) {
+            cantidadTotal = cantidadTotal + Number;
+
+            if (item == "cafe"){
+                cantidadCafes = cantidadCafes + Number;
+            }
+            if (item == "bocadillo"){
+                cantidadBocadillos+= Number;
+            }
+            if (item == "bebida"){
+                cantidadBebidas+= Number;
+            }
+         
+            verTotal();
+
+        }
+        
+        function borrarCarrito () {
+            cantidadTotal = 0;
+            verTotal();
+        }
+
+        function verTotal () {
+            
+            //Formas de mostrar información al usuario
+            //alert(cantidad); De esta manera es más facil
+            
+            const mensajito = `Has marcado ${cantidadTotal} de items<br> Cafes: ${cantidadCafes} Bocadilos: ${cantidadBocadillos} Bebidas: ${cantidadBebidas}`;
+            console.log(mensajito);
+
+            txtInfo.innerHTML = mensajito;
+        }
+        
+
+        
+        borrarCarrito();
+
+    </script>
+</body>
+</html>
