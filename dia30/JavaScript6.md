@@ -109,7 +109,7 @@ lineas*/
  * Esta es una función que suma 2 números
  * 
  * @param {number} a - El primer número
- * @param {numbre} b - El segundo número
+ * @param {number} b - El segundo número
  * @return{number} La suma de los 2 números anteriores
  * 
  */
