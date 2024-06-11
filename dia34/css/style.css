@@ -1,0 +1,72 @@
+
+/*Esto es un reset*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.Slider {
+    overflow: hidden;/*Esto sirve para que todo lo que vaya fuera de esta caja (en este cao la caja slider) si no pondría una foto al lado de la otra, de esta forma oculta el resto de fotos*/
+    border: 2px solid #ddd;
+    border-radius: 10px;
+
+    /*Para que los botones floten*/
+    position: relative;
+
+}
+
+.Slider-images {
+    /*esto modifica la caja que contiene las imágenes*/
+    display: flex;
+    width: 400px;
+    height: 600px;
+
+}
+
+.Slider-images img{
+    /*Esto modifica las medidas de las imágenes*/
+    min-width: 400px;
+    max-width: 400px;
+    min-height: 600px;
+    max-height: 600px;
+
+    object-fit: contain;/*Esto hace que se adapte al tamaño que hemos especificado antes añadiendole barras arriba y abajo o a los lados según el tamaño de las imágenes*/
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btnPrev {
+    left: 10px;
+}
+
+.btnNext {
+    right: 10px;
+}
+
+.Slider-Contador {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <!--Esta es la caja que contendrá las imágenes, los botones y el contador-->
+    <div class="Slider">
+        <div class="Slider-images">
+        <img alt="Ejemplo FunkPop 1" src="https://picsum.photos/200/300">
+        <img alt="Ejemplo FunkPop 2" src="https://picsum.photos/id/237/200/300">
+        <img alt="Ejemplo FunkPop 3 alto" src="https://picsum.photos/seed/picsum/200/300">
+        <img alt="Ejemplo FunkPop 4" src="https://picsum.photos/200/300?grayscale">
+        <img alt="Ejemplo FunkPop 1" src="https://picsum.photos/200/300">
+        <img alt="Ejemplo FunkPop 2" src="https://picsum.photos/200/300">
+        </div>
+
+        <!--Estos serán los botones para pasar fotos-->
+        <button class="btnPrev"><</button>
+        <button class="btnNext">></button>
+
+        <!--Este es el contador quen nos identificará la foto que estamos viendo-->
+        <div class="Slider-Contador">
+            <span id="txtActual">X</span><!--Este indicará la foto actual--> / <span id="txtTotal">XX</span><!--Este indicará la cantidad total de fotos-->
+        </div>
+    </div>
+    
+    <script src="./js/script.js"></script>
+</body>
+</html>
