@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acordeón</title>
+    <style>
+        .acordeon{
+            border: 1px solid black;
+        }
+        .acordeon-item {
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+        .acordeon-content{
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+
+        .acordeon-header {
+            background-color: greenyellow;
+        }
+
+        .active .acordeon-content{
+            display: block;
+        }
+        .active .acordeon-header{
+            background-color: lightcoral;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="acordeon">
+    <div class="acordeon-item">
+        <div class="acordeon-header">Sección 1</div>
+        <div class="acordeon-content">Contenido de sección 1</div>
+    </div>
+    <div class="acordeon-item">
+        <div class="acordeon-header">Sección 2</div>
+        <div class="acordeon-content">
+            Contenido de sección 2
+        </div>
+    </div>
+    <div class="acordeon-item">
+        <div class="acordeon-header">Sección 3</div>
+        <div class="acordeon-content">
+            Contenido de sección 3
+        </div>
+    </div>
+    </div>
+        <script>
+//PASO 1: Declarar variables y elementos
+const acordeon = document.querySelector(".acordeon");
+const headers = document.querySelectorAll(".acordeon-header");
+const acordeonItems = document.querySelectorAll(".acordeon-item");
+
+//PASO 2: Nuestras funciones
+headers.forEach(header => {
+    header.addEventListener("click", ()=>{
+
+        const item = header.closest(".acordeon-item");
+        //cerrar todos los content (quitar el active)
+        cerrarTodas();
+        //abrir el content al que le hice click (agregar (active))
+        item.classList.toggle("active");
+    });
+});
+
+function cerrarTodas(){
+    acordeonItems.forEach( elemento => {
+            elemento.classList.remove("active");
+        });
+}
+//PASO 3: Ejecutar nuestro código
+//acordeonItems[0].classList.add(`active`);
+headers[0].click();//El click solo funciona si hemos puesto un addEventListener anteriormente
+
+
+        </script>
+</body>
+</html>

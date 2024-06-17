@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <style>
+        .tabs-contenido {
+            display: none;
+        }
+
+        .u-visible {
+            display:block;
+        }
+
+        .tabs-buttons{
+            display: flex;
+            cursor: pointer;
+        }
+        .tabs-button {
+            padding: 10px;
+            background-color: #ddd;
+            border: 1px solid #ccc;
+        }
+        .button-active{
+            background-color: #fff;
+            border: 1px solid salmon;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tabs-buttons">
+            <div data-tab="pagina1" class="tabs-button button-active">Tab 1</div>
+            <div data-tab="pagina2" class="tabs-button">Tab 2</div>
+            <div data-tab="pagina3" class="tabs-button">Tab 3</div>
+        </div>
+        <div id="pagina1" class="tabs-contenido u-visible">
+            <h2>Pagina 1</h2>
+            <p>Contenido de página 1</p>
+        </div>
+        <div id="pagina2" class="tabs-contenido">
+            <h2>Pagina 2</h2>
+            <p>Contenido de página 2</p>
+        </div>
+        <div id="pagina3" class="tabs-contenido">
+            <h2>Pagina 3</h2>
+            <p>Contenido de página 3</p>
+        </div>
+        
+    </div>
+
+    <script>
+        const listaBotones = document.querySelectorAll(".tabs-button");
+        const listaContenidos = document.querySelectorAll(".tabs-contenido"); 
+
+        listaBotones.forEach(boton =>{
+            boton.addEventListener("click", ()=>{
+
+                //PRIMERA FORMA
+                //const id = boton.getAttribute("data-tab");//Sirve para leer cualquier propiedad de cualquier elemento en este caso es el data-tab pero podría ser el id o la clase
+                //alert(id);
+                //ESTO ES OTRO METODO ATTRIBUTE: boton.setAttribute("caja", "importante") Esto sirve para añadir un atributo al elemento
+
+                //SEGUNDA FORMA
+                const id = boton.dataset.tab;
+                const target = document.getElementById(id);
+                //alert(id);
+                //quito el u-visible de todas las páginas
+                listaContenidos.forEach(pagina => {
+                    pagina.classList.remove("u-visible");
+                });
+                //le quito el button-active de todos los botones
+                listaBotones.forEach(boton =>{
+                    boton.classList.remove("button-active");
+                })
+                //agrego la clase u-visible al que le hice click
+                target.classList.add("u-visible");
+                
+                //agregar la clase de button-active al que le hice click
+                boton.classList.add("button-active");
+
+
+            });
+        });
+    </script>
+</body>
+</html>
