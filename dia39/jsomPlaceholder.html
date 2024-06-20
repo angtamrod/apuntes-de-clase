@@ -14,13 +14,7 @@
             try {
                 const usuariosJson = await fetch("https://jsonplaceholder.typicode.com/users");
                 const listaUsuarios = await usuariosJson.json(); //convierte mis datos de JSON en JS
-                //console.log(listaUsuarios);
-            //console.log(datos);
-            //console.log(datos[0].name); // Traer el nombre del usuario
-            //return datos;
-            //imprimir los datos
-
-
+                
            imprimirUsuarios(listaUsuarios);
             
 
