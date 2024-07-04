@@ -153,7 +153,7 @@ Existe la propieda minmax() nos permite definir un tamaños mínimo y máximo pa
 
 ```
 
-Existe otra propiedad llamada repear() que nos permite repetir un número de veces un tamaño de columna o fila.
+Existe otra propiedad llamada repeat() que nos permite repetir un número de veces un tamaño de columna o fila.
 ```css
 /**/
 .container{

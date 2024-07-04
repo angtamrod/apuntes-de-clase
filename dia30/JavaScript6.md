@@ -645,3 +645,594 @@ coche.metodoEncender();
 //Para que el coche me venga a buscar con la función que hemos puesto arriba
 coche.buscarme(positionGPS);
 ```
+
+
+# QuerySelector
+
+Los query selector nos devuelven objetos del tipo element que son refeencias a los nodos html, o a `null` si no lo encuentra.
+pueden ser clases IDs o elementos 
+
+```js
+//seleccionamos el primer input que posea el atributo type = "text"
+const textInput = document.querySelector(`input[type=text]`)
+console.log(primerTextInput);
+```
+
+# QuerySelectorAll
+
+Este nos devuelve una lista de nodos (nodeList) que se comporta como un array, incluso es una `lista vacía`  o un arrays vacío si no encuentra ningún elemento.
+
+```js
+//seleccionamos todas las secciones con la clase "section"
+const todosLosDivSections = document.querySelectorAll(`.section`);
+todosLosDivSection.forEach( unDiv => {
+    console.log(unDiv);
+});
+```
+
+# addEventListener
+
+Escuchamos (prestar atencón a) un evento ("click", "keyup", "input", "change") específico en alguno de nuestros elementos. Cuando pasa algo como por ejemplo:
+
+click: Se ejecuta cuando se hace click.
+
+input: Se ejecuta cada vez que el valor del campo cambia. Esto incluye escribir, borrar o pegar texto con el ratón.
+
+keyup: Se activa cuando el usuario suelta la tecla. Es útil por si necesitas detectar cambios en tiempo real. Pero no se va a ejecutar si el usuario pega un texto con el ratón, o borra un texto con el ratón.
+
+change: Este evento se ejecuta cuando el elemento pierde el foco y su valor ha cambiado. Es útil si solo necesitamos reaccionar cuando el usuario termina de editar el campo.
+
+```js 
+primerTextInput.addEventListener{"input", () => {
+    console.log("El input cambio su valor");
+}
+
+  }
+
+//keyup ejecuta la función cuando soltamos la tecla que tenemos que pulsar, con cualquier teclado
+//primerTextInput.addEventListener{"keyup", funcionAejecutarCuandoHagoKeyUp()   }
+//como no hace falta poner nombre ya que se ejecutará siempre que soltemos la tecla es mejor usar función flecha
+primerTextInput.addEventListener{"keyup", () => {
+    console.log("Acabo de liverar una tecla");
+}
+
+  }
+
+primerTextInput.addEventListener{"keyup", () => {
+    console.log("Me fui del input, y su valor ha cambiado");
+}
+
+  }
+```
+
+
+# Fecha Date ()
+
+El objeto Date() devuelve una fecha específica
+
+```js
+let hoy = new Date(); // devuelve la fecha actual
+
+const sumarUnDia = new Date(hoy);
+hoy.getDate() // Con el método getDate nos muestra el día del mes en el que estamos en este caso (10)
+
+```
+
+```js
+let hoy = new Date(); // devuelve la fecha actual
+
+// sumar 1 día
+const sumarUnDia = new Date(hoy);
+sumarUnDia = hoy.getDate() + 1 // nos devolvería el número 11
+```
+
+```js
+let hoy = new Date(); // devuelve la fecha actual
+
+// sumar 1 día
+const sumarUnDia = new Date(hoy);
+sumarUnDia.setDate ( hoy.getDate() + 1);// nos devolvería la fecha de mañana con todos los datos
+
+//restar un día
+const restarUnDia = new Date(hoy);
+restarUnDia.setDate( hoy.getDate()- 1);
+
+//restar dos horas
+const restar2Horas = new Date(hoy);
+restar2Horas.setHours( hoy.gerHours() -2); //hace 2 horas
+
+//Estamos haciendo una función para cambiar los minutos, de la fecha actual,
+function cambiarMinutos(fecha, minutos){
+    const nuevaFecha = new Date(fecha);
+    nuevaFecha.setMinutes(fecha.getMinutes() + minutos);
+    return nuevaFecha;
+}
+
+const hoy = new Date();
+const dentrode5minutos = cambiarMinutos(fecha, 5);
+const hace15minutos = cambiarMinutos(fecha, -15);
+```
+
+# Math.random() entre 2 valores
+
+Math.random() devuleve un número decimal entre 0 y 1
+
+```js
+function numeroRandomEntre(min, max){
+    return Math.floor(Math.random() * (max-min +1) + min);
+}
+const min=2;
+const max=15;
+const numeroAleatorio = numeroRandomEntre(min, max);
+console.log(`Numero entre ${min} y ${max} es ${numeroAleatorio}`);
+```
+
+# BOM y Objeto Window
+
+El BOM representa el navegador (chrome, safari, firefox, Brave, Edge, etc...)
+
+Window es el objeto principal del BOM, y contiene métodos que nos permiten interactuar con él.
+
+```js
+//obtener la altura y el ancho de la ventana
+const altura = window.innerHeight;
+const anchura = window.innerWidth;
+
+//obtener la URL actual
+const url = window.location.href;
+
+//Redirigir a otra página
+window.location.href = "https://google.com";
+
+//Recargar la página
+window.location.reload();
+
+//Historial de navegación
+window.history.back():
+window.history.forward():
+
+//abrir una ventana nueva
+const nuevaVentana = window.open("https://google.com", "_blank", "width=600, height=400");
+nuevaVentana.close();// cerrar la ventana que abrí
+
+// Ejecutar una función cada vez que redimensiono mi ventana
+window.addEventListener("resize", () =>(
+    const anchura = window.innerWidth;
+    //console.log("Cambie el ancho de mi ventana", anchura);
+
+))
+
+//Para cuando ponemos los scripts en el <head> (NO ESTÁ TERMINADO)
+window.addEventListener ("Load", )
+
+```
+
+# Crear HTML desde JavaScript
+
+El método createElement() me permite crear elementos en el HTML desde JS 
+El método appendChild() nos permite meter elementos dentro de otros en el HTML desde JS
+
+El profe prefiere que usemos el inneHTML.
+Pero esta forma tiene algunas ventajas para códigos más complejos es mejor
+
+```js
+const div = document.createElement(`div`); // Con esto puedo crear cualquier etiqueta que se nos ocurra
+const imagen = document.createElemeny(`img`); // <img>
+imagen.src = "./imgs/foto1.png";// <img src=>
+imagen.alt = "mi foto de perfil";//
+
+
+//Para agregar la imagen en el div
+div.appendChild(imagen);
+//Para agregar el div en el body
+document.body.appendChild(div);
+
+//Ejemplo con template strings
+document.body.innerHTML += `<div>
+                                <img src="imgs/foto1.png" alt="Mi foto de perfil">
+                            </div>`;
+const miImagen = document.querySelector("img");
+
+miImagen.addEventListener("click", ()=>{
+    console.log("le hice click!!!");
+})
+```
+
+# JSON
+
+Se ve como un objeto de JS `pero es un string`, es una versión simplificada de los objetos de JS y se usa para enviar una información del backend al frontend
+
+Es una representación de datos en forma de texto (string) que sigue la sintáxis específica.
+Es un formato que facilita la comunicación entre los back-end y front-end, servidores, y es fácil de leer para el usuario, y fácil de crear para la máquina. 
+
+Para comprobar el JASON: https://jsonplaceholder.typicode.com/
+
+Los string de JASON no soportan métodos
+
+```js
+// Objeto JavaScript
+const alumno = {
+    edad: 25,
+    nombre: "Pepito", 
+    saludar: () => {alert ("HOLAAA");}
+}
+
+// convertir un objeto JS en sting de JSON
+const jsonString2 = JSON.stringfy(alumno);
+console.log(jsonString2);
+
+// String JSON (Representación para que se entienda mejor ESTO NO SE PONE ASÍ)
+{
+    "edad":25,
+    "nombre": "Pepito",
+}
+//String de JSON
+`{ "edad": 25, "nombre": "Pepito"}`
+
+
+// String de JSON
+const jsonString= `{"edad":25, "nombre": "Pepito"}`
+console.log(jsonString);
+//Convertir un string de JSON a un objeto de JS
+const objeto = JSON.parse(jsonString);
+console.log(objeto);
+``` 
+
+# Contenido asíncrono
+
+Antes de ver el contenido asíncrono que utilizaremos en nuestros proyectos, debemos entender algunos conceptos fundamentales, por ejemplo: Sincronía, asincronía, callbacks, promesas, async/await, entre otros.
+
+
+## Concepto de Sincronía vs. Asincronía
+
+La sincronía es la ejecución de tareas en un orden secuencial, es decir, una tarea se ejecuta después de que la anterior haya terminado. 
+
+```javascript
+console.log("Paso 1");
+
+traerDatos();
+console.log("Paso 3");
+
+function traerDatos(){
+    esperar(3000); // wait 3 seconds
+    console.log("Paso 2");
+}
+
+// simulación de setTimeout (sincrónico)
+function esperar(milliseconds) {
+    const start = new Date().getTime();
+    while (new Date().getTime() - start < milliseconds);
+}
+```
+
+
+La asincronía es la ejecución de tareas en un orden no secuencial, es decir, una tarea puede ejecutarse antes de que la anterior haya terminado. 
+
+Se utiliza para:
+- traer información de la DB
+- traer información de una API
+- manipular archivos de nuestro equipo
+
+
+```javascript
+    console.log("Paso 1");
+
+    traerDatos();
+    console.log("Paso 3");
+
+    function traerDatos(){
+        //es asíncrono
+        setTimeout(() => {
+            console.log("Paso 2");
+        }, 3000); // wait 3 seconds
+    }
+```
+
+
+## Callbacks
+
+Como debemos esperar a que una tarea asíncrona termine para poder continuar con la siguiente, se utilizan los callbacks para realizar una acción después de que la tarea asíncrona haya terminado.
+
+```javascript
+    let datos="";
+    console.log("Paso 1: ", datos);
+
+    traerDatos(imprimirDatos);
+    console.log("Paso 3");
+
+    function traerDatos(callback){
+        //es asíncrono
+        setTimeout(() => {
+            console.log("Paso 2");
+            datos = "Datos 1,2,3";
+            callback(datos);
+        }, 3000); // wait 3 seconds
+    }
+
+    function imprimirDatos(datos){
+        console.log("paso 4: imprimiendo", datos);
+    }
+```
+
+otra manera de mostrar lo mismo es con el uso de funciones anónimas: 
+
+```javascript
+    let datos="";
+    console.log("Paso 1: ", datos);
+
+    traerDatos((datos) => {
+        console.log("paso 4: imprimiendo", datos);
+    });
+
+    console.log("Paso 3: ", datos);
+
+    function traerDatos(callback){
+        //es asíncrono
+        setTimeout(() => {
+            datos = "Datos 1,2,3";
+            console.log("Paso 2:", datos);
+            callback(datos);
+        }, 3000); // wait 3 seconds
+    }
+```
+
+Ejercicio: Crear una código donde se muestre por consola la siguiente secuencia:
+1) Un comensal solicita a un camarero un entrante para su comida
+2) el camarero va a buscar el plato solicitado
+3) la persona toma un vaso de agua mientras espera
+4) el camarero lleva el plato a la mesa
+5) la persona come el plato de comida
+
+
+```javascript
+    let plato = "Ensalada";
+    console.log("1) El comensal solicita a un camarero un plato de ", plato);
+
+    hacerPedido(plato, ()=>{
+        console.log("4) El camarero lleva el plato ("+plato+") a la mesa");
+        console.log("5) La persona se come su comida: ", plato);
+    })
+
+    console.log("3) La persona toma un vaso de agua");
+
+
+    // Acción asíncrona del camarero que va a buscar el plato de comida
+    function hacerPedido(plato, callback) {
+        console.log("2) El camarero va a buscar el plato de comida: ", plato);
+
+        // demora en la cocina
+        setTimeout(() => {
+            callback();
+        }, 3000); // Simula el tiempo que tarda el camarero en ir a buscar el plato
+    }
+```
+
+
+## Promesas
+
+La gran desventaja de los callbacks es que se pueden anidar y se vuelven difíciles de leer y mantener. Lo cual se llama `callbackHell` (buscar en google) Por eso se han creado las `promesas`. 
+
+Una promesa es un objeto que representa la terminación o el fracaso de una operación asíncrona. 
+
+```javascript
+const promesa = new Promise((resolve, reject) => {
+    console.log("Ejecutando promesa");
+    setTimeout(() => {
+        resolve("¡Éxito!");
+        // reject("¡Error!");
+    }, 1000);
+});
+
+promesa
+  .then(result => console.log(result)) // "¡Éxito!"
+  .catch(error => console.log(error));
+```
+
+## Encadenamiento de promesas
+
+Podemos encadenar promesas para que se ejecuten en un orden específico:
+
+```javascript
+
+// cada return será el argumento de la siguiente promesa
+promesa.then(result => {
+    console.log(result); // "¡Éxito!"
+    return "¡Éxito 2!";
+}).then(result => {
+    console.log(result); // "¡Éxito!"
+    return "¡Éxito 3!";
+}).then(result => {
+    console.log(result); // "¡Éxito!"
+    return "¡Éxito 4!";
+}).then(result => {
+    console.log(result); // "¡Éxito 2!"
+}).catch(error => {
+    console.error("tuvimos un error!"); // "¡Error!"
+});
+```
+
+## Fetch API con .then() y .catch()
+
+Uno de los usos fundamentales de las promesas es en el uso de la Fetch API para realizar peticiones HTTP a otros servidores. 
+
+La función `fetch()` nos permite hacer peticiones HTTP a otros servidores y nos devuelve una promesa. 
+
+```javascript
+fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => response.json()) // convertimos nuestro JSON string a un objeto JS
+  .then(json => {
+    console.log(json);
+    console.log("Titulo: ", json.title);
+    }) // utilizamos la respuesta como querramos
+  .catch(error => console.error(error)); // gestión de errores
+```
+
+## Async/Await (Uso en proyecto final!)
+
+La desventaja de las promesas es que se vuelven difíciles de leer y mantener cuando se anidan. Por eso se han creado las funciones `async` y `await`.
+
+
+```javascript
+// la función es "async" para poder utilizar "await"
+async function traerDatos() {
+
+    // cuando quiero esperar a que una promesa termine, utilizo "await"
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+    const json = await response.json();
+    console.log(json);
+    console.log("Titulo: ", json.title);
+}
+
+
+
+// Esta es la manera actual de trabajar con promesas en JavaScript.  
+async function traerDatos() {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+        const json = await response.json();
+        console.log(json);
+        console.log("Titulo: ", json.title);
+    } catch (error) {
+        console.error(error);
+    }
+}
+```
+
+Nuestro ejemplo del restaurante  utilizando fetch sería:
+
+```javascript
+    let plato = "Ensalada";
+    console.log("1) El comensal solicita a un camarero un plato");
+    console.log("2) El camarero va a buscar el plato de comida");
+    buscarPlato();
+
+    async function buscarPlato() {
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+            const datosJS = await response.json();
+
+            // los siguientes mensajes esperan el await para poder continuar...
+            console.log("4) El camarero lleva el plato ("+plato+") a la mesa");
+            console.log("5) La persona se come su comida: ", plato);
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    // no espera a la función asíncrona
+    console.log("3) La persona toma un vaso de agua");
+```
+
+## Ejercicios de Fetch
+
+Obtener usuarios de jsonPlaceHolder y mostrarlos en el DOM
+
+```javascript
+    const domUsuarios = document.getElementById('usuarios'); // <ul id="usuarios"></ul>
+
+    async function obtenerUsuarios() {
+        try {
+            const response = await fetch('https://jsonplaceholder.typicode.com/users');
+            const usuarios = await response.json();
+            
+            console.log(usuarios);
+            //const listaUsuarios = document.body;
+            
+            usuarios.forEach(usuario => {
+                const li = document.createElement('li');
+                li.textContent = usuario.name;
+                domUsuarios.appendChild(li);
+            });
+        } catch (error) {
+            console.error("ERRORRR:",error);
+        }
+    }
+
+    obtenerUsuarios();
+```
+
+## Enviar información con Fetch
+
+El método `fetch()` también nos permite recibir tanto como enviar información a un servidor. 
+
+
+Ejemplo formulario tradicional:
+    
+```html
+    <form id="formulario">
+        <input type="text" name="nombre" id="nombre">
+        <input type="email" name="email" id="email">
+        <button type="submit">Enviar</button>
+    </form>
+```
+
+```javascript
+    document.getElementById('miFormulario').addEventListener('submit', function(event) {
+        // Prevenir el envío tradicional del formulario
+        event.preventDefault();
+
+        // Comprobaciones aquí
+        // ...
+
+        // Construir la cadena de datos en formato x-www-form-urlencoded
+        const datosFormulario = 'nombre=' + encodeURIComponent(this.nombre.value) + 
+                                '&apellido=' + encodeURIComponent(this.apellido.value);
+
+        // Enviar los datos con fetch
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: datosFormulario,
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+    });
+```
+
+Un ejemplo en JSON que permite estructuras mas complejas sería
+
+```javascript
+const data = { title: 'Mi título', body: 'Mi cuerpo' };
+
+fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+});
+
+// O utilizando el "FormData"
+const formData = new FormData();
+formData.append('nombre', 'John Doe');
+formData.append('edad', 30);
+fetch(url, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: formData,
+});
+
+// si estamos enviando un formulario con un input file
+const formData = new FormData();
+formData.append('file', input.files[0]);
+fetch(url, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'multipart/form-data',
+    },
+    body: formData,
+});
+
+```
+
+
+
+
+
+
+
